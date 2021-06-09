@@ -7,7 +7,7 @@ The website will take the input of the user and give them information about thei
 
 ## Criteria
 * Uses two or more server-side APIs
-* MUST use CSS framework /NO or little Boot-Srap.
+* Cannot use Boot-Srap.
 * Uses client-side storage.
 * Has a clean and polished U.I.
 * Meets accessibility standards.
