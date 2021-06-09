@@ -19,7 +19,7 @@ fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
     console.log(access_token);
     getFlightOffers(access_token);
   });
-​
+
 function getFlightOffers(token) {
   fetch(
     "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2021-11-01&adults=1&max=2",
@@ -36,7 +36,7 @@ function getFlightOffers(token) {
       createFlightHtml(flightData);
     });
 }
-​
+
 function createFlightHtml(burrito) {
   // Create our HTML elements here
 }
