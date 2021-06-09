@@ -1,41 +1,62 @@
-:root{--Bod:#4285F4; --Light:#e0e0e0; --Sun:#FFC700; --Dark:#303030}
+:root{--Sky:#4285F4; --Light:#e0e0e0; --Sun:#FFC700; --Dark:#303030}
 ::selection{}
 html{scroll-behavior: smooth;transition: all 0.5s ease-in-out;}
-body{ font-family: sans-serif; background-color: var(--Dark);}
+body{ font-family: sans-serif; background-color: black;}
 
 nav ul li{padding: 15%;}
 
-li a {text-decoration: none;color: var(--Light); font-size: 65%;}
+li a {text-decoration: none;color: var(--Light); font-size: 65%}
 
-li:hover{background-color: var(--Sun);}
-li a:active {color: var(--Bod);}
+li:hover{background-color: var(--Dark);}
+li a:active {color: var(--Sun);}
 {}
 
 .navMenu{list-style-type: none;text-align:center;}
+.navBtn{
+    background-color:var(--Sky);
+    border: transparent;
+}
+#closeBtn:hover{
+    transform:rotate(180deg);
+}
+.navBtn:active{
+    opacity: 50%;
+}
 
-#test:hover {color: var(--Sun)}
+#openBtn{
+position:absolute;
+right: 0%;
+opacity: 50%;
+border-radius: 10% 0 0 10%;
+}
+
+#test:hover {color: var(--Dark)}
 
 .navBox{
 position:absolute;
 right: 0%;
-background-color:var(--Bod);
+background-color:var(--Sky);
 color: var(--Light);
 height: 100%;
 width: 20%;
 transition: .5s ease-in-out;
-font-size: 150%;
+font-size: 1.5rem;
 font-weight: bold;
 }
 
-#logo{
+.logo{
+text-decoration: none;
+color: var(--Light);
+font-size: 150%
+}
+
+#logoP2{
 position: absolute;
 top: 2.5%;
 left: 2.5%;
-text-decoration: none;
-color: var(--Light);
 }
 
-#logo:active {color: var(--Bod)}
+#logoP2:active {color: var(--Sky)}
 
 #phx{
 color: var(--Sun);
