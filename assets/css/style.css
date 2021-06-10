@@ -25,7 +25,8 @@ li a {
     font-size: 65%;
 }
 li:hover {
-    background-color: var(--Dark);
+    background-color: var(--Sky);
+    font-size: 1.75rem;
 }
 li a:active {
     color: var(--Sun);
@@ -78,36 +79,43 @@ opacity: 50%;
 #openBtn {
 position: absolute;
 right: 0%;
-opacity: 50%;
+background:rgb(66, 133, 244, 0.5) ;
 border-radius: 10% 0 0 10%;
 }
 
 .navBox {
 position: absolute;
 right: 0%;
-background-color: var(--Sky);
+background: rgb(66, 133, 244, 0.5);
+/* background-color: var(--Sky); */
 color: var(--Light);
 height: 100%;
 width: 20%;
-font-size: 1.5rem;
+font-size: 1.25rem;
 font-weight: bold;
 }
 
+#closeBtn{
+background: rgb(0,0,0,.0);
+transform: rotate(180deg)
+}
+
 #closeBtn:hover {
-transform: rotate(180deg);
+opacity: 50%;
 }
 
 
-/* homepage with no home location in local storage */
+/* Website without location in Local Storage */
 #noHome{
 display: flex;
 justify-content: center;
 padding-top: 250px;
 }
 
-#homeInput{
+#homeCity,#homeState{
 border: solid var(--Sky) 3.5px;
 text-align: center;
+font-size: 1rem;
 padding: 1.5%;
 margin: 5px;
 }
@@ -134,7 +142,7 @@ border-radius: 5%;
 }
     
 #p1SubmitBtn:active{
-background-color: var(--Sun);
-color: var(--Dark);
+background-color: var(--Light);
+color: var(--Sky);
 }
     

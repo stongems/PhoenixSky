@@ -1,6 +1,10 @@
 const btn2open = document.querySelector("#openBtn");
 const btn2close = document.querySelector("#closeBtn");
 const navBar = document.querySelector("#navBoxId");
+const p1SubBtn = document.querySelector("#p1SubmitBtn");
+
+
+
 let access_token;
 
 
