@@ -1,8 +1,10 @@
 const btn2open = document.querySelector("#openBtn");
 const btn2close = document.querySelector("#closeBtn");
 const navBar = document.querySelector("#navBoxId");
-const p1SubBtn = document.querySelector("#p1SubmitBtn");
+const p1SubBtn = document.querySelector("#p1SubmitBtn"); 
 
+let homeCity = document.querySelector("#homeCity");
+let homeState = document.querySelector("#homeState");
 
 
 let access_token;
@@ -44,9 +46,40 @@ function getFlightOffers(token) {
 function createFlightHtml(burrito) {
   // Create our HTML elements here
 }
-
 // Send a message to Tucker Beauchamp
 
+
+function enterHomeInfo() {
+  //code that uses stored information to do search for Home location images
+
+  //code that hides front page assets and shows 2nd page assets
+  
+}
+
+
+p1SubBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  if (
+  homeCity.value == "" ||
+  homeState.value == "no"
+  )
+  {
+  console.log("I cant do that Dave")
+  }
+
+  else if 
+  (
+  homeCity.value !== "" &&
+  homeState.value !== "no"
+  )
+  {
+    localStorage.setItem("HOMEcity", JSON.stringify(homeCity.value));
+    localStorage.setItem("HOMEstate", JSON.stringify(homeState.value));
+    console.log("Hello World");
+    enterHomeInfo();
+  };
+  
+})
 
 
 
