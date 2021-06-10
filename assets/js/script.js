@@ -6,6 +6,7 @@ const p1SubBtn = document.querySelector("#p1SubmitBtn");
 let homeCity = document.querySelector("#homeCity");
 let homeState = document.querySelector("#homeState");
 
+
 //Variables used for Amadeus
 // The variable names themselves are the query's we would send itno the fetch request
 let access_token;
@@ -13,6 +14,25 @@ let originLocationCode; // REQUIRED user's current location, Must be assigned to
 let destinationLocationCode; //REQUIRED place user is looking to go, Must be assigned to an IATA code PULL ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 let departureDate; // REQUIRED we could set it to just be a date  in the very near future=============== "2 DIFF DEPARTURE DATES"
 //end of Amadeus Variables
+
+
+
+var url = `https://ipgeolocation.abstractapi.com/v1/
+?api_key=6628343940ed44a69b857eae1de5d184&
+fields=ip_address,city,region,longitude,latitude,timezone_abbreviation`
+
+fetch(url)
+.then((res) => res.json())
+.then(data => {
+  city = data.city;
+  console.log(data)
+  //can get IP ADDRESS, CITY, STATE, LONG, and LAT
+  //any calls need to be done within this fetch
+}
+)
+
+
+
 fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
   body: "grant_type=client_credentials&client_id=2fdNuvibX2M6d60L6dMzYlpxkH1jV4wg&client_secret=wFgzffD956eN8Aau",
   headers: {
@@ -54,7 +74,7 @@ function getFlightOffers(token) {
     });
 }
 
-function createFlightHtml(burrito) {
+function createFlightHtml() {
   // Create our HTML elements here
 }
 
