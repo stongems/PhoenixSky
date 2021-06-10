@@ -1,10 +1,17 @@
 const btn2open = document.querySelector("#openBtn");
 const btn2close = document.querySelector("#closeBtn");
 const navBar = document.querySelector("#navBoxId");
-const p1SubBtn = document.querySelector("#p1SubmitBtn");
+const p1SubBtn = document.querySelector("#p1SubmitBtn"); 
+
+
+let homeCity = document.querySelector("#homeCity");
+let homeState = document.querySelector("#homeState");
+
+
 
 //Variables used for Amadeus
 // The variable names themselves are the query's we would send itno the fetch request
+
 let access_token;
 let originLocationCode; // REQUIRED user's current location, Must be assigned to a IATA code 'GOOGLE IT' PULL PULL FROM HOME STATE LCL STORAGE
 let destinationLocationCode; //REQUIRED place user is looking to go, Must be assigned to an IATA code PULL ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -64,7 +71,52 @@ function getFlightOffers(token) {
 function createFlightHtml(burrito) {
   // Create our HTML elements here
 }
+
 function getuserpref() {}
+
+function getuserpref(){
+
+}
+
+
+
+
+function enterHomeInfo() {
+  //code that uses stored information to do search for Home location images
+
+  //code that hides front page assets and shows 2nd page assets
+  
+}
+
+
+p1SubBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  if (
+  homeCity.value == "" ||
+  homeState.value == "no"
+  )
+  {
+  console.log("I cant do that Dave")
+  }
+
+  else if 
+  (
+  homeCity.value !== "" &&
+  homeState.value !== "no"
+  )
+  {
+    localStorage.setItem("HOMEcity", JSON.stringify(homeCity.value));
+    localStorage.setItem("HOMEstate", JSON.stringify(homeState.value));
+    console.log("Hello World");
+    enterHomeInfo();
+  };
+  
+})
+
+
+
+
+
 
 btn2open.addEventListener("click", function (e) {
   e.preventDefault();
