@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css"/>
 </head>
 <body>
-    <aside>
+    <!-- Nav Bar -->
+    <aside id="navBar">
             <nav class="navBox hidden" id="navBoxId">
                 <button type="button" class="navBtn" id="closeBtn"><img src="./assets/img/btn.png" alt="Nav Button"></button>
                     <ul id="menu" class="navMenu">
@@ -20,13 +21,81 @@
                         <li><a href="#" class="navOption" id="contact">Contact US</a></li>
                     </ul>
             </nav>
-
             <button class="navBtn" id="openBtn"><img src="./assets/img/btn.png" alt="Nav Button"></button>
     </aside>
+    
+    <!-- Website without location in Local Storage -->
+    <main id="noHome" class="hidden">
+        <section id="noHomeBox">
+        <a id="logoP1" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a>
+        <form>
+            <input id="homeCity" placeholder="Enter Home City">
+        </form>
+        <form>
+            <select id="homeState">
+                <option>- Select Home State -</option>
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Delaware</option>
+                <option>DC</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Hawaii</option>
+                <option>Idaho</option>
+                <option>Illinois</option>
+                <option>Indiana</option>
+                <option>Iowa</option>
+                <option>Kansas</option>
+                <option>Kentucky</option>
+                <option>Louisiana</option>
+                <option>Maine</option>
+                <option>Maryland</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option>Mississippi</option>
+                <option>Missouri</option>
+                <option>Montana</option>
+                <option>Nebraska</option>
+                <option>Nevada</option>
+                <option>New Hampshire</option>
+                <option>New Jersey</option>
+                <option>New Mexico</option>
+                <option>New York</option>
+                <option>North Carolina</option>
+                <option>North Dakota</option>
+                <option>Ohio</option>
+                <option>Oklahoma</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Rhode Island</option>
+                <option>South Carolina</option>
+                <option>South Dakota</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Utah</option>
+                <option>Vermont</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+                <option>West Virginia</option>
+                <option>Wisconsin</option>
+                <option>Wyoming</option>
+            </select>
+        </form>
+        <button id="p1SubmitBtn" onclick="#">
+            Submit
+        </button>
+        </section>
+    </main>
+
+    <!-- Website with location in Local Storage-->
+    <main id="withHome" class="hidden">
     <h1><a id="logoP2" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a></h1>
-
-    <main>
-
     </main>
    
     <script type="text/javascript" src="./assets/js/script.js"></script>
