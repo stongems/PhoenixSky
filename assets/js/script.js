@@ -1,11 +1,19 @@
 const btn2open = document.querySelector("#openBtn");
 const btn2close = document.querySelector("#closeBtn");
 const navBar = document.querySelector("#navBoxId");
+const p1SubBtn = document.querySelector("#p1SubmitBtn"); 
+const clearHome = document.querySelector("#clearHome");
+const clearHome2 = document.querySelector("#clearHome2");
 const p1SubBtn = document.querySelector("#p1SubmitBtn");
 
 let homeCity = document.querySelector("#homeCity");
 let homeState = document.querySelector("#homeState");
 
+let phoenixSkyBG = `https://api.unsplash.com/photos/random?client_id=0tNQnwiqu7-f6GxEQvW8DBp3RdMXqYHvbZrHcI8VhRs&query=phoenix+sky`;
+
+fetch(phoenixSkyBG)
+.then(data => console.log(data))
+.then(document.body.style.backgroundImage = phoenixSkyBG);
 
 //Variables used for Amadeus
 // The variable names themselves are the query's we would send itno the fetch request
@@ -85,16 +93,34 @@ function enterHomeInfo() {
   //code that hides front page assets and shows 2nd page assets
 }
 
-p1SubBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (homeCity.value == "" || homeState.value == "no") {
-    console.log("I cant do that Dave");
-  } else if (homeCity.value !== "" && homeState.value !== "no") {
-    localStorage.setItem("HOMEcity", JSON.stringify(homeCity.value));
-    localStorage.setItem("HOMEstate", JSON.stringify(homeState.value));
-    enterHomeInfo();
-  }
+p1SubBtn.addEventListener("click", function (e) 
+{
+e.preventDefault();
+if (homeCity.value == "" || homeState.value == "no") 
+{
+console.log("I cant do that Dave");
+} 
+else if (homeCity.value !== "" && homeState.value !== "no") 
+{
+localStorage.setItem("HOMEcity", JSON.stringify(homeCity.value));
+localStorage.setItem("HOMEstate", JSON.stringify(homeState.value));
+enterHomeInfo();
+};
+  
 });
+
+
+
+clearHome2.addEventListener
+(
+"click", function (e) 
+{
+localStorage.setItem("HOMEcity", "");
+localStorage.setItem("HOMEstate", "");
+console.log();
+window.location.reload();
+}
+);
 
 btn2open.addEventListener("click", function (e) {
   e.preventDefault();

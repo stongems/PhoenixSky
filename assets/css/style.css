@@ -103,7 +103,9 @@ transform: rotate(180deg)
 #closeBtn:hover {
 opacity: 50%;
 }
-
+#clearHome:hover{
+    background-color:#ff4500;
+}
 
 /* Website without location in Local Storage */
 #noHome{
