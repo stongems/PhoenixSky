@@ -6,17 +6,16 @@ const p1SubBtn = document.querySelector("#p1SubmitBtn");
 //Variables used for Amadeus
 // The variable names themselves are the query's we would send itno the fetch request
 let access_token;
-let originLocationCode;// REQUIRED user's current location, Must be assigned to a IATA code 'GOOGLE IT'
+let originLocationCode; // REQUIRED user's current location, Must be assigned to a IATA code 'GOOGLE IT'
 let destinationLocationCode; //REQUIRED place user is looking to go, Must be assigned to an IATA code
 let departureDate; // REQUIRED we could set it to just be a date  in the very near future
-let travelClass;// first class, business, coach... etc
-let returnDate;// self explanatory
+let travelClass; // first class, business, coach... etc
+let returnDate; // self explanatory
 let adults; //REQUIRED we could default set it to 1. We'll talk about it.
 let nonStop; //indicates direct flights
 let currencyCode; //set prefered currency WE WILL NEED A WAY TO ALLOW USERS TO CHOOSE
 let maxprice; //we have the option to let users specify a max price for the flight.
 //end of Amadeus Variables
-
 
 fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
   body: "grant_type=client_credentials&client_id=2fdNuvibX2M6d60L6dMzYlpxkH1jV4wg&client_secret=wFgzffD956eN8Aau",
@@ -35,11 +34,19 @@ fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
   });
 
 function getFlightOffers(token) {
-  getuserpref()//we'll have to go over how we want the info introduced to the user so we can
+  getuserpref(); //we'll have to go over how we want the info introduced to the user so we can
   //use the variables in the fetch request
   fetch(
     // `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2021-11-01&adults=1&max=2`
-    `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=`+(originLocationCode)+`&destinationLocationCode=`+(destinationLocationCode)+`+&departureDate=`+(departureDate)+`&adults=`+(adults)+`&max=2`,
+    `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=` +
+      originLocationCode +
+      `&destinationLocationCode=` +
+      destinationLocationCode +
+      `+&departureDate=` +
+      departureDate +
+      `&adults=` +
+      adults +
+      `&max=2`,
     {
       headers: {
         Authorization: "Bearer " + token,
@@ -57,9 +64,7 @@ function getFlightOffers(token) {
 function createFlightHtml(burrito) {
   // Create our HTML elements here
 }
-function getuserpref(){
-
-}
+function getuserpref() {}
 
 btn2open.addEventListener("click", function (e) {
   e.preventDefault();
