@@ -4,17 +4,23 @@ const navBar = document.querySelector("#navBoxId");
 const p1SubBtn = document.querySelector("#p1SubmitBtn"); 
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
-const p1SubBtn = document.querySelector("#p1SubmitBtn");
+const phoenixSky = document.querySelector("#phoenixSky");
 
 let homeCity = document.querySelector("#homeCity");
 let homeState = document.querySelector("#homeState");
 
-let phoenixSkyBG = `https://api.unsplash.com/photos/random?client_id=0tNQnwiqu7-f6GxEQvW8DBp3RdMXqYHvbZrHcI8VhRs&query=phoenix+sky`;
+let test=[];
+
+let phoenixSkyBG = 
+`https://api.unsplash.com/photos/random?client_id=0tNQnwiqu7-f6GxEQvW8DBp3RdMXqYHvbZrHcI8VhRs&query=phoenix+sky`;
 
 fetch(phoenixSkyBG)
-.then(data => console.log(data))
-.then(document.body.style.backgroundImage = phoenixSkyBG);
-
+.then((res) => res.json())
+.then(data => {
+  console.log(data)
+}
+  
+)
 //Variables used for Amadeus
 // The variable names themselves are the query's we would send itno the fetch request
 let access_token;
