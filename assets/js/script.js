@@ -1,7 +1,18 @@
 const btn2open = document.querySelector("#openBtn");
 const btn2close = document.querySelector("#closeBtn");
 const navBar = document.querySelector("#navBoxId");
+//Variables used for Amadeus
+// The variable names themselves are the query's we would send itno the fetch request
 let access_token;
+let originLocationCode;// REQUIRED user's current location, Must be assigned to a IATA code 'GOOGLE IT'
+let destinationLocationCode; //REQUIRED place user is looking to go, Must be assigned to an IATA code
+let departureDate; // REQUIRED we could set it to just be a date  in the very near future
+let travelClass;
+let returnDate;
+let adults; //REQUIRED we could default set it to 1. We'll talk about it.
+let nonStop; //indicates direct flights
+let currencyCode; //set prefered currency WE WILL NEED A WAY TO ALLOW USERS TO CHOOSE
+let maxprice; //we have the option to let users specify a max price for the flight.
 
 
 fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
@@ -31,6 +42,7 @@ function getFlightOffers(token) {
   )
     .then((response) => response.json())
     .then(function (flightData) {
+      console.log(flightData);
       // We have access to the flight data at this point
       // This is where we would build our HTML elements
       createFlightHtml(flightData);
@@ -43,16 +55,13 @@ function createFlightHtml(burrito) {
 
 // Send a message to Tucker Beauchamp
 
-
-
-
-btn2open.addEventListener("click", function(e) {
-    e.preventDefault();
-    btn2open.classList.add("hidden");
-    navBar.classList.remove("hidden");
-})
-btn2close.addEventListener("click", function(e) {
-    e.preventDefault();
-    navBar.classList.add("hidden");
-    btn2open.classList.remove("hidden");
-})
+btn2open.addEventListener("click", function (e) {
+  e.preventDefault();
+  btn2open.classList.add("hidden");
+  navBar.classList.remove("hidden");
+});
+btn2close.addEventListener("click", function (e) {
+  e.preventDefault();
+  navBar.classList.add("hidden");
+  btn2open.classList.remove("hidden");
+});
