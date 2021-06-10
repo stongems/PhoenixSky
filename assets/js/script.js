@@ -5,7 +5,6 @@ const p1SubBtn = document.querySelector("#p1SubmitBtn");
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
 const p1SubBtn = document.querySelector("#p1SubmitBtn");
-
 let homeCity = document.querySelector("#homeCity");
 let homeState = document.querySelector("#homeState");
 
