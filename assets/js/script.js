@@ -13,6 +13,7 @@ let adults; //REQUIRED we could default set it to 1. We'll talk about it.
 let nonStop; //indicates direct flights
 let currencyCode; //set prefered currency WE WILL NEED A WAY TO ALLOW USERS TO CHOOSE
 let maxprice; //we have the option to let users specify a max price for the flight.
+//end of Amadeus Variables
 
 
 fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
@@ -32,6 +33,8 @@ fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
   });
 
 function getFlightOffers(token) {
+  getuserpref()//we'll have to go over how we want the info introduced to the user so we can
+  //use the variables in the fetch request
   fetch(
     "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=SYD&destinationLocationCode=BKK&departureDate=2021-11-01&adults=1&max=2",
     {
@@ -43,8 +46,7 @@ function getFlightOffers(token) {
     .then((response) => response.json())
     .then(function (flightData) {
       console.log(flightData);
-      // We have access to the flight data at this point
-      // This is where we would build our HTML elements
+
       createFlightHtml(flightData);
     });
 }
@@ -52,8 +54,6 @@ function getFlightOffers(token) {
 function createFlightHtml(burrito) {
   // Create our HTML elements here
 }
-
-// Send a message to Tucker Beauchamp
 
 btn2open.addEventListener("click", function (e) {
   e.preventDefault();
