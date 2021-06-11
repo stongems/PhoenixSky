@@ -1,6 +1,6 @@
-const openBtn = document.querySelector("#openBtn");
-const closeBtn = document.querySelector("#closeBtn");
-const navBox = document.querySelector("#navBoxId");
+const openNavBarBtn = document.querySelector("#openNavBarBtn");
+const closeNavBarBtn = document.querySelector("#closeNavBarBtn");
+const navBarMenu = document.querySelector("#navBarMenu");
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
 const phoenixSky = document.querySelector("#phoenixSky");
@@ -112,13 +112,13 @@ clearHome2.addEventListener("click", function (e) {
   window.location.reload();
 });
 
-openBtn.addEventListener("click", function (e) {
+openNavBarBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  openBtn.classList.add("hidden");
-  navBox.classList.remove("hidden");
+  openNavBarBtn.classList.add("hidden");
+  navBarMenu.classList.remove("hidden");
 });
-closeBtn.addEventListener("click", function (e) {
+closeNavBarBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  navBox.classList.add("hidden");
-  openBtn.classList.remove("hidden");
+  navBarMenu.classList.add("hidden");
+  openNavBarBtn.classList.remove("hidden");
 });
