@@ -1,13 +1,11 @@
-
-
 :root {
-  --Sky: #4285f4;
-  --Light: #e0e0e0;
-  --Sun: #ffc700;
-  --Dark: #303030;
+  --theme-light: #ffffff;
+  --theme-dark: #303030;
+  --theme-yellow: #ffc700;
+  --theme-blue: #4682b4;
+  --theme-trans-blue: rgba(66, 133, 244, 0.9);
 }
 /* ::selection {} */
-
 
 /* sudo classes */
 html {
@@ -15,139 +13,232 @@ html {
 }
 body {
   font-family: sans-serif;
-  /* background-color: black; */
-  color: var(--Light);
-}
-nav ul li {
-    padding: 15%;
-}
-li a {
-    text-decoration: none;
-    color: var(--Light);
-    font-size: 65%;
-}
-li:hover {
-    background-color: var(--Sky);
-    font-size: 1.75rem;
-}
-li a:active {
-    color: var(--Sun);
+  background: url(../img/Phoenix\ SKy.jpg) no-repeat;
+  background-size: cover;
+  background-color: black;
+  color: var(--theme-light);
 }
 
+/* body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+} */
+
+nav ul li {
+  padding: 15%;
+}
+li a {
+  text-decoration: none;
+  color: var(--theme-light);
+  font-size: 65%;
+}
+li:hover {
+  background-color: var(--Sky);
+  font-size: 1.75rem;
+}
+li a:active {
+  color: var(--theme-yellow);
+}
 
 /* GP classes */
 .hidden {
-display: none;
+  display: none;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  height: 100vh;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3rem;
+  width: 15rem;
+  border-radius: 5%;
+  background: var(--theme-trans-blue);
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(94, 110, 201),
+    0rem 0rem 300rem rgb(0, 0, 0);
+}
+
+.homepage a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  padding-top: 0;
+  margin: 0;
+}
+
+/*********************Tutor Notes******************************* */
+/* .homepage a::before {
+  content: "fly";
+  color:coral;
+  position: absolute;
+  top: 65px;
+  left: -50px;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+.homepage a::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 7, 7, 0.0);
+  } */
+
+.homepage-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#homeCity,
+#homeState {
+  border: solid var(--Sky) 3.5px;
+  /*******************TEMP********************/
+  border: solid rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--theme-blue);
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  padding: 1.5%;
+  margin: 0.5rem;
+}
+
+/* Button appearance settings*/
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: var(--theme-yellow);
+  border-radius: 10px;
+  color: var(--theme-);
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.btn:hover {
+  background-color: var(--theme-light);
+  color: var(--theme-dark);
+}
+
+/* .btn:active {
+  background-color: var(--theme-light);
+  color: var(--Sky);
+} */
 
 /* Logo settings */
 .logo {
-    text-decoration: none;
-    color: var(--Light);
-    font-size: 150%;
+  text-decoration: none;
+  color: var(--theme-light);
+  font-size: 150%;
 }
 
 #logoP2 {
-    position: absolute;
-    top: 2.5%;
-    left: 2.5%;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
 }
 
 #logoP2:active {
-    color: var(--Sky);
+  color: var(--Sky);
 }
 
 #phx {
-    color: var(--Sun);
+  color: var(--theme-yellow);
 }
-
 
 /* Nav Bar */
 .navMenu {
-list-style-type: none;
-text-align: center;
+  list-style-type: none;
+  text-align: center;
 }
 
-.navBtn {
-background-color: var(--Sky);
-border: transparent;
+.airPlaneBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: var(--theme-blue);
+  border-radius: 10px;
+  color: black;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
 }
 
 .navBtn:active {
-opacity: 50%;
+  opacity: 50%;
 }
-
+/* airPlaneBtn NEEDS name change */
 #openBtn {
-position: absolute;
-right: 0%;
-background:rgb(66, 133, 244, 0.5) ;
-border-radius: 10% 0 0 10%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  right: 0%;
+  border: none;
+  background: var(--theme-blue);
+  border-radius: 10% 0 0 10%;
+  color: black;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
 }
-
+/* airPlaneTab style when opened */
 .navBox {
-position: absolute;
-right: 0%;
-background: rgb(66, 133, 244, 0.5);
-/* background-color: var(--Sky); */
-color: var(--Light);
-height: 100%;
-width: 20%;
-font-size: 1.25rem;
-font-weight: bold;
+  position: absolute;
+  right: 0%;
+  background: var(--theme-blue);
+  color: var(--theme-dark);
+  height: 100%;
+  width: 20%;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
-
-#closeBtn{
-background: rgb(0,0,0,.0);
-transform: rotate(180deg)
+/* airPlaneTab-closeBtn */
+#closeBtn {
+  background: rgb(0, 0, 0, 0);
+  transform: rotate(180deg);
 }
-
+/* airPlane */
 #closeBtn:hover {
-opacity: 50%;
-}
-#clearHome:hover{
-    background-color:#ff4500;
-    color:var(--Dark);
+  opacity: 50%;
 }
 
-/* Website without location in Local Storage */
-#noHome{
-display: flex;
-justify-content: center;
-padding-top: 250px;
+#clearHome:hover {
+  background-color: #ff4500;
+  color: var(--theme-dark);
 }
-
-#homeCity,#homeState{
-border: solid var(--Sky) 3.5px;
-text-align: center;
-font-size: 1rem;
-padding: 1.5%;
-margin: 5px;
-}
-
-#noHomeBox{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 42px;
-border-radius: 5%;
-background: rgb(66, 133, 244, 0.5);
-}
-
-
-/* Button appearance settings*/
-#p1SubmitBtn{
-border: none;
-padding: 5px;
-margin: 5px;
-background-color: var(--Sky) ;
-color:var(--Light);
-border-radius: 5%;
-}
-    
-#p1SubmitBtn:active{
-background-color: var(--Light);
-color: var(--Sky);
-}
-    
