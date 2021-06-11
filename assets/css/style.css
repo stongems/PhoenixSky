@@ -15,7 +15,7 @@ html {
 }
 body {
   font-family: sans-serif;
-  background-color: black;
+  /* background-color: black; */
   color: var(--Light);
 }
 nav ul li {
