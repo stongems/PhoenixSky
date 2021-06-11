@@ -73,9 +73,6 @@ fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
       });
   }
 
-  
-
-
 function getOriginLocationCode(token){
     getUserLat()
     getUserLong()
