@@ -1,25 +1,18 @@
 const openNavBarBtn = document.querySelector("#openNavBarBtn");
 const closeNavBarBtn = document.querySelector("#closeNavBarBtn");
 const navBarMenu = document.querySelector("#navBarMenu");
+const p1SubBtn = document.querySelector("#p1SubmitBtn"); 
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
-const phoenixSky = document.querySelector("#phoenixSky");
-const p1SubBtn = document.querySelector("#p1SubBtn");
 
 let homeCity = document.querySelector("#homeCity");
 let homeState = document.querySelector("#homeState");
 
 let phoenixSkyBG = `https://api.unsplash.com/photos/random?client_id=0tNQnwiqu7-f6GxEQvW8DBp3RdMXqYHvbZrHcI8VhRs&query=phoenix+sky`;
-let test = [];
 
 fetch(phoenixSkyBG)
-.then((res) => res.json())
-.then(data => {
-console.log(data);
-// let link = data.links.html.slice(7)
-console.log(link);})
-// .then(document.body.style.backgroundImage = `url(data.links.html)`);
-
+.then(data => console.log(data))
+.then(document.body.style.backgroundImage = phoenixSkyBG);
 
 //Variables used for Amadeus
 // The variable names themselves are the query's we would send itno the fetch request
@@ -29,18 +22,102 @@ let destinationLocationCode; //REQUIRED place user is looking to go, Must be ass
 let departureDate; // REQUIRED we could set it to just be a date  in the very near future=============== "2 DIFF DEPARTURE DATES"
 //end of Amadeus Variables
 
-var url = `https://ipgeolocation.abstractapi.com/v1/
-?api_key=6628343940ed44a69b857eae1de5d184&
-fields=ip_address,city,region,longitude,latitude,timezone_abbreviation`;
+// var url = `https://ipgeolocation.abstractapi.com/v1/
+// ?api_key=6628343940ed44a69b857eae1de5d184&
+// fields=ip_address,city,region,longitude,latitude,timezone`
 
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => {
-    city = data.city;
-    console.log(data);
-    //can get IP ADDRESS, CITY, STATE, LONG, and LAT
-    //any calls need to be done within this fetch
-  });
+// fetch(url)
+// .then((res) => res.json())
+// .then(data => {
+//   city = data.city;
+//   console.log(data)
+//   //can get IP ADDRESS, CITY, STATE, LONG, and LAT
+//   //any calls need to be done within this fetch
+// }
+// )
+function getIpAddress(){
+  var url = `https://ipgeolocation.abstractapi.com/v1/
+?api_key=6628343940ed44a69b857eae1de5d184&
+fields=ip_address,`
+
+      fetch(url)
+      .then((res) => res.json())
+      .then(data => {
+          userIpAddress = data.ip_address
+          console.log(userIpAddress)
+          
+              return userIpAddress
+      })
+}
+function getCity(){
+  var url = `https://ipgeolocation.abstractapi.com/v1/
+?api_key=6628343940ed44a69b857eae1de5d184&
+fields=city,`
+
+      fetch(url)
+      .then((res) => res.json())
+      .then(data => {
+          userCity = data.city
+          console.log(userCity)
+
+              return userCity
+
+      })
+}
+
+function getUserRegion(){
+  var url = `https://ipgeolocation.abstractapi.com/v1/
+?api_key=6628343940ed44a69b857eae1de5d184&
+fields=region,`
+
+      fetch(url)
+      .then((res) => res.json())
+      .then(data => {
+          userRegion = data.region
+          console.log(userRegion)
+              return (userRegion)
+      })
+  }
+function getLong(){
+  var url = `https://ipgeolocation.abstractapi.com/v1/
+?api_key=6628343940ed44a69b857eae1de5d184&
+fields=longitude,`
+
+      fetch(url)
+      .then((res) => res.json())
+      .then(data => {
+          userLong = data.longitude
+          console.log(userLong)
+              return userLong
+      })
+}
+function getLat(){
+  var url = `https://ipgeolocation.abstractapi.com/v1/
+?api_key=6628343940ed44a69b857eae1de5d184&
+fields=latitude,`
+
+      fetch(url)
+      .then((res) => res.json())
+      .then(data => {
+          userLat = data.latitude
+          console.log(userLat)
+              return userLat
+      })
+}
+  
+  function getTimezone(){
+      var url = `https://ipgeolocation.abstractapi.com/v1/
+  ?api_key=6628343940ed44a69b857eae1de5d184&
+  fields=timezone,`
+  
+          fetch(url)
+          .then((res) => res.json())
+          .then(data => {
+              userTimezone = data.timezone.abbreviation
+              console.log(userTimezone)
+                  return userTimezone
+          })
+}
 
 fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
   body: "grant_type=client_credentials&client_id=2fdNuvibX2M6d60L6dMzYlpxkH1jV4wg&client_secret=wFgzffD956eN8Aau",
@@ -94,22 +171,20 @@ function enterHomeInfo() {
   //code that hides front page assets and shows 2nd page assets
 }
 
-p1SubBtn.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (homeCity.value == "" || homeState.value == "no") {
-    console.log("I cant do that Dave");
-  } else if (homeCity.value !== "" && homeState.value !== "no") {
-    localStorage.setItem("HOMEcity", JSON.stringify(homeCity.value));
-    localStorage.setItem("HOMEstate", JSON.stringify(homeState.value));
-    enterHomeInfo();
-  }
-});
-
-clearHome2.addEventListener("click", function (e) {
-  localStorage.setItem("HOMEcity", "");
-  localStorage.setItem("HOMEstate", "");
-  console.log();
-  window.location.reload();
+p1SubBtn.addEventListener("click", function (e) 
+{
+e.preventDefault();
+if (homeCity.value == "" || homeState.value == "no") 
+{
+console.log("I cant do that Dave");
+} 
+else if (homeCity.value !== "" && homeState.value !== "no") 
+{
+localStorage.setItem("HOMEcity", JSON.stringify(homeCity.value));
+localStorage.setItem("HOMEstate", JSON.stringify(homeState.value));
+enterHomeInfo();
+};
+  
 });
 
 openNavBarBtn.addEventListener("click", function (e) {
@@ -117,8 +192,20 @@ openNavBarBtn.addEventListener("click", function (e) {
   openNavBarBtn.classList.add("hidden");
   navBarMenu.classList.remove("hidden");
 });
+
 closeNavBarBtn.addEventListener("click", function (e) {
   e.preventDefault();
   navBarMenu.classList.add("hidden");
   openNavBarBtn.classList.remove("hidden");
 });
+
+clearHome2.addEventListener
+(
+"click", function (e) 
+{
+localStorage.setItem("HOMEcity", "");
+localStorage.setItem("HOMEstate", "");
+console.log();
+window.location.reload();
+}
+);
