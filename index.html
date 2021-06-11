@@ -12,7 +12,8 @@
     <!-- Nav Bar -->
     <aside id="navBar">
             <nav class="navBox hidden" id="navBoxId">
-                <button type="button" class="navBtn" id="closeBtn"><img src="./assets/img/btn.png" alt="Nav Button"></button>
+                <button type="button" class="navBtn" id="closeBtn">
+                    <img src="./assets/img/btn.png" alt="Nav Button"></button>
                     <ul id="menu" class="navMenu">
                         <li><a href="#" class="navOption" id="flights">Flights</a></li>
                         <li><a href="#" class="navOption" id="images">Images</a></li>
@@ -20,18 +21,22 @@
                         <li><a href="#" class="navOption" id="about">About US</a></li>
                         <li><a href="#" class="navOption" id="resources">Resources</a></li>
                         <li><a href="#" class="navOption" id="contact">Contact US</a></li>
-                        <li id="clearHome"class="hidden"><a href="#" class="navOption" id="clearHome2">Clear Home</a></li>
+                        <li id="clearHome"class="hidden">
+                            <a href="#" class="navOption" id="clearHome2">Clear Home</a></li>
 
                     </ul>
             </nav>
-            <button class="navBtn" id="openBtn"><img src="./assets/img/btn.png" alt="Nav Button"></button>
+            <!-- renamed this from navBtn -->
+            <button class="airPlaneBtn" id="openBtn">
+                <img src="./assets/img/btn.png" alt="Nav Button">✈️</button>
     </aside>
 
     <!-- Website without location in Local Storage -->
     
-    <!-- *changed main ID to p1Home && p1HomeBoxfrom !noHome* -->
+    <!-- *change main ID to p1Home && p1HomeBoxfrom !noHome* -->
     <main id="p1Home" class="hidden">
         <section id="p1HomeBox">
+            <!-- logoP1 unused -->
         <a id="logoP1" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a>
         <form>
             <input id="homeCity" placeholder="Enter Home City">
@@ -99,7 +104,8 @@
     </main>
 
     <!-- Website with location in Local Storage-->
-    <main id="withHome" class="hidden">
+    <main id="p2logo" class="hidden">
+       <!-- Unused code -->
     <h1><a id="logoP2" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a></h1>
     </main>
    

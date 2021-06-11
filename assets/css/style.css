@@ -1,13 +1,9 @@
-
-
 :root {
-  --Sky: #4285f4;
-  --Light: #e0e0e0;
-  --Sun: #ffc700;
-  --Dark: #303030;
+  --theme-light: #e0e0e0;
+  --theme-yellow: #ffc700;
+  --theme-dark: #303030;
 }
 /* ::selection {} */
-
 
 /* sudo classes */
 html {
@@ -16,138 +12,161 @@ html {
 body {
   font-family: sans-serif;
   background-color: black;
-  color: var(--Light);
+  color: var(--theme-light);
 }
 nav ul li {
-    padding: 15%;
+  padding: 15%;
 }
 li a {
-    text-decoration: none;
-    color: var(--Light);
-    font-size: 65%;
+  text-decoration: none;
+  color: var(--theme-light);
+  font-size: 65%;
 }
 li:hover {
-    background-color: var(--Sky);
-    font-size: 1.75rem;
+  background-color: var(--Sky);
+  font-size: 1.75rem;
 }
 li a:active {
-    color: var(--Sun);
+  color: var(--theme-yellow);
 }
-
 
 /* GP classes */
 .hidden {
-display: none;
+  display: none;
 }
-
 
 /* Logo settings */
 .logo {
-    text-decoration: none;
-    color: var(--Light);
-    font-size: 150%;
+  text-decoration: none;
+  color: var(--theme-light);
+  font-size: 150%;
 }
 
 #logoP2 {
-    position: absolute;
-    top: 2.5%;
-    left: 2.5%;
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
 }
 
 #logoP2:active {
-    color: var(--Sky);
+  color: var(--Sky);
 }
 
 #phx {
-    color: var(--Sun);
+  color: var(--theme-yellow);
 }
-
 
 /* Nav Bar */
 .navMenu {
-list-style-type: none;
-text-align: center;
+  list-style-type: none;
+  text-align: center;
 }
 
-.navBtn {
-background-color: var(--Sky);
-border: transparent;
+.airPlaneBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: rgb(228, 228, 228);
+  border-radius: 10px;
+  color: black;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
 }
 
 .navBtn:active {
-opacity: 50%;
+  opacity: 50%;
 }
 
 #openBtn {
-position: absolute;
-right: 0%;
-background:rgb(66, 133, 244, 0.5) ;
-border-radius: 10% 0 0 10%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  right: 0%;
+  border: none;
+  background: var(--Sky: #4285f4);
+  border-radius: 10% 0 0 10%;
+  color: black;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
 }
 
 .navBox {
-position: absolute;
-right: 0%;
-background: rgb(66, 133, 244, 0.5);
-/* background-color: var(--Sky); */
-color: var(--Light);
-height: 100%;
-width: 20%;
-font-size: 1.25rem;
-font-weight: bold;
+  position: absolute;
+  right: 0%;
+  background: rgb(66, 133, 244, 0.5);
+  /* background-color: var(--Sky); */
+  color: var(--theme-light);
+  height: 100%;
+  width: 20%;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-#closeBtn{
-background: rgb(0,0,0,.0);
-transform: rotate(180deg)
+#closeBtn {
+  background: rgb(0, 0, 0, 0);
+  transform: rotate(180deg);
 }
 
 #closeBtn:hover {
-opacity: 50%;
+  opacity: 50%;
 }
-#clearHome:hover{
-    background-color:#ff4500;
-    color:var(--Dark);
+#clearHome:hover {
+  background-color: #ff4500;
+  color: var(--theme-dark);
 }
 
 /* Website without location in Local Storage */
-#p1Home{
-display: flex;
-justify-content: center;
-padding-top: 250px;
+#p1Home {
+  display: flex;
+  justify-content: center;
+  padding-top: 250px;
+  
 }
 
-#homeCity,#homeState{
-border: solid var(--Sky) 3.5px;
-text-align: center;
-font-size: 1rem;
-padding: 1.5%;
-margin: 5px;
+#homeCity,
+#homeState {
+  border: solid var(--Sky) 3.5px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 1.5%;
+  margin: 5px;
 }
 
-#p1HomeBox{
-display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
-padding: 42px;
-border-radius: 5%;
-background: rgb(66, 133, 244, 0.5);
+#p1HomeBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 42px;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(225, 227, 238),
+    0rem 0rem 5rem rgb(14, 47, 233);
+  border-radius: 5%;
+  background: rgb(66, 133, 244, 0.5);
 }
-
 
 /* Button appearance settings*/
-#p1SubmitBtn{
-border: none;
-padding: 5px;
-margin: 5px;
-background-color: var(--Sky) ;
-color:var(--Light);
-border-radius: 5%;
+#p1SubmitBtn {
+  border: none;
+  padding: 5px;
+  margin: 5px;
+  background-color: var(--Sky);
+  color: var(--theme-light);
+  border-radius: 5%;
 }
-    
-#p1SubmitBtn:active{
-background-color: var(--Light);
-color: var(--Sky);
+
+#p1SubmitBtn:active {
+  background-color: var(--theme-light);
+  color: var(--Sky);
 }
-    
