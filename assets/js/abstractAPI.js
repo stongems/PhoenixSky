@@ -1,3 +1,10 @@
+let userIpAddress;
+let userCity;
+let userRegion;
+let userTimezone;
+let userLat;
+let userLong;
+
 function getIpAddress(){
     var url = `https://ipgeolocation.abstractapi.com/v1/
   ?api_key=6628343940ed44a69b857eae1de5d184&
@@ -37,8 +44,8 @@ function getIpAddress(){
         .then((res) => res.json())
         .then(data => {
             userRegion = data.region
-            console.log(userRegion)
-                return (userRegion)
+            console.loguserRegion
+                return userRegion
         })
     }
   

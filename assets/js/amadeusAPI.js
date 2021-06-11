@@ -2,7 +2,10 @@ let access_token;
 let originLocationCode;
 let destinationLocationCode; 
 let departureDate;
+let destLat;
+let destLong;
 
+// function dummy(){
 fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
   body: "grant_type=client_credentials&client_id=2fdNuvibX2M6d60L6dMzYlpxkH1jV4wg&client_secret=wFgzffD956eN8Aau",
   headers: {
@@ -18,6 +21,7 @@ fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
     console.log(access_token);
     getFlightOffers(access_token);
   });
+// }
 
   function getFlightOffers(token) {
     getOriginLocationCode();
