@@ -9,12 +9,23 @@
     <title>PhoenixSky</title>
   </head>
   <body id="phoenixSky">
+    
     <!-- Nav Bar -->
     <aside id="navBar">
+      
+      <!-- Nav Bar Closed -->
+      <button id="openBtn" class="airPlaneBtn">
+        <img src="./assets/img/zoom2.png" alt="Nav Button" />
+      </button>
+
+
+      <!-- Nav Bar Open -->
       <nav class="navBox hidden" id="navBoxId">
-        <button type="button" class="navBtn" id="closeBtn">
-          <img src="./assets/img/btn.png" alt="Nav Button" />
+        
+        <button class="navBtn" id="closeBtn">
+          <img src="./assets/img/zoom.png" alt="Nav Button" />
         </button>
+
         <ul id="menu" class="navMenu">
           <li><a href="#" class="navOption" id="flights">Flights</a></li>
           <li><a href="#" class="navOption" id="images">Images</a></li>
@@ -27,22 +38,18 @@
           </li>
         </ul>
       </nav>
-      <!-- renamed this from navBtn -->
-      <button class="airPlaneBtn" id="openBtn">
-        <img src="./assets/img/btn.png" alt="Nav Button" />✈️
-      </button>
+
     </aside>
 
-    <!-- Website without location in Local Storage -->
-
-    <!-- *change main ID to p1Home && p1HomeBoxfrom !noHome* -->
+<!-- Website without location in Local Storage-->
+<!-- !!!!! WORKING !!!!-->
     <main>
-      <!-- CONSOLODATED p1Home + p1HomeBox original code here -><section id="p1HomeBox"><<<<<<< -->
-      <!-- logoP1 unused -->
       <div class="homepage hidden">
         <a id="logoP1" class="logo" href="#">
-          <h1><span id="phx">Phoenix</span>Sky</h1></a
-        >
+          <h1>
+            <span id="phx">Phoenix</span>Sky
+          </h1>
+        </a>
         <form class='homepage-form'>
           <input id="homeCity" placeholder="Enter Home City" />
           <select id="homeState">

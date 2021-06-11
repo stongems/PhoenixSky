@@ -1,6 +1,6 @@
-const btn2open = document.querySelector("#openBtn");
-const btn2close = document.querySelector("#closeBtn");
-const navBar = document.querySelector("#navBoxId");
+const openBtn = document.querySelector("#openBtn");
+const closeBtn = document.querySelector("#closeBtn");
+const navBox = document.querySelector("#navBoxId");
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
 const phoenixSky = document.querySelector("#phoenixSky");
@@ -12,15 +12,13 @@ let homeState = document.querySelector("#homeState");
 let phoenixSkyBG = `https://api.unsplash.com/photos/random?client_id=0tNQnwiqu7-f6GxEQvW8DBp3RdMXqYHvbZrHcI8VhRs&query=phoenix+sky`;
 let test = [];
 
-let phoenixSkyBG = `https://api.unsplash.com/photos/random?client_id=0tNQnwiqu7-f6GxEQvW8DBp3RdMXqYHvbZrHcI8VhRs&query=phoenix+sky`;
-
 fetch(phoenixSkyBG)
 .then((res) => res.json())
 .then(data => {
 console.log(data);
-let link = data.links.html.slice(7)
+// let link = data.links.html.slice(7)
 console.log(link);})
-.then(document.body.style.backgroundImage = `url(data.links.html)`);
+// .then(document.body.style.backgroundImage = `url(data.links.html)`);
 
 
 //Variables used for Amadeus
@@ -114,13 +112,13 @@ clearHome2.addEventListener("click", function (e) {
   window.location.reload();
 });
 
-btn2open.addEventListener("click", function (e) {
+openBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  btn2open.classList.add("hidden");
-  navBar.classList.remove("hidden");
+  openBtn.classList.add("hidden");
+  navBox.classList.remove("hidden");
 });
-btn2close.addEventListener("click", function (e) {
+closeBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  navBar.classList.add("hidden");
-  btn2open.classList.remove("hidden");
+  navBox.classList.add("hidden");
+  openBtn.classList.remove("hidden");
 });
