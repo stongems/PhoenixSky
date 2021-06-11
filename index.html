@@ -13,13 +13,13 @@
     <!-- Nav Bar -->
     <aside id="navBar">
       
-      <!-- Nav Bar Closed -->
+      <!-- When Nav Bar is Closed -->
       <button class="airPlaneBtn" id="openNavBarBtn">
         <img src="./assets/img/zoom.png" alt="Nav Button" />
       </button>
 
 
-      <!-- Nav Bar Open -->
+      <!-- When Nav Bar is Open -->
       <nav class="navBarMenu hidden" id="navBarMenu">
         
         <button class="navBtn" id="closeNavBarBtn">
@@ -27,100 +27,46 @@
         </button>
 
         <ul id="menu" class="navMenu">
-          <li id="flights" class="hidden"><a href="#" class="navOption">Flights</a></li>
-          <li id="images" class="hidden"><a href="#" class="navOption">Images</a></li>
-          <li id="events" class="hidden"><a href="#" class="navOption">Events</a></li>
           <li id="about"><a href="#" class="navOption">About US</a></li>
           <li id="resources"><a href="#" class="navOption">Resources</a></li>
           <li id="contact"><a href="#" class="navOption">Contact US</a></li>
-          <li id="clearHome" class="hidden"><a href="#" class="navOption" id="clearHome2">Clear Home</a></li>
         </ul>
       </nav>
 
     </aside>
 
-<!-- Website without location in Local Storage-->
-<!-- !!!!! WORKING !!!!-->
-    <main>
-      <div class="homepage">
-        <a id="logoP1" class="logo" href="#">
-          <h1>
-            <span id="phx">Phoenix</span>Sky
-          </h1>
-        </a>
-        <form class='homepage-form'>
-          <input id="homeCity" placeholder="Enter Home City" />
-          <select id="homeState">
-            <option value="no">Select Home State</option>
-            <option>Alabama</option>
-            <option>Alaska</option>
-            <option>Arizona</option>
-            <option>Arkansas</option>
-            <option>California</option>
-            <option>Colorado</option>
-            <option>Connecticut</option>
-            <option>Delaware</option>
-            <option>DC</option>
-            <option>Florida</option>
-            <option>Georgia</option>
-            <option>Hawaii</option>
-            <option>Idaho</option>
-            <option>Illinois</option>
-            <option>Indiana</option>
-            <option>Iowa</option>
-            <option>Kansas</option>
-            <option>Kentucky</option>
-            <option>Louisiana</option>
-            <option>Maine</option>
-            <option>Maryland</option>
-            <option>Massachusetts</option>
-            <option>Michigan</option>
-            <option>Minnesota</option>
-            <option>Mississippi</option>
-            <option>Missouri</option>
-            <option>Montana</option>
-            <option>Nebraska</option>
-            <option>Nevada</option>
-            <option>New Hampshire</option>
-            <option>New Jersey</option>
-            <option>New Mexico</option>
-            <option>New York</option>
-            <option>North Carolina</option>
-            <option>North Dakota</option>
-            <option>Ohio</option>
-            <option>Oklahoma</option>
-            <option>Oregon</option>
-            <option>Pennsylvania</option>
-            <option>Rhode Island</option>
-            <option>South Carolina</option>
-            <option>South Dakota</option>
-            <option>Tennessee</option>
-            <option>Texas</option>
-            <option>Utah</option>
-            <option>Vermont</option>
-            <option>Virginia</option>
-            <option>Washington</option>
-            <option>West Virginia</option>
-            <option>Wisconsin</option>
-            <option>Wyoming</option>
-          </select>
-          <button class="btn" id="p1SubBtn">Submit</button>
-        </form>
-      </div>
-    </main>
 
     <!-- Website with location in Local Storage-->
-    <main id="p2logo" class="hidden">
-      <!-- Unused code -->
-      <h1>
-        <a id="logoP2" class="logo" href="#"
-          ><span id="phx">Phoenix</span>Sky</a
-        >
-      </h1>
+    <main id="p1logo" class="">
+      <h1><a id="logoP2" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a></h1>
+      <form>
+        <input id="destinationID" type="text" placeholder="Enter Home Destination">
+        <button class="btn" id="p1SubBtn">Submit</button>
+      </form>
+
+
+      <section>
+        <!-- for weather -->
+      </section>
+      <section>
+        <!-- for flight data output -->
+      </section>
+      <section>
+        <!-- for images -->
+      </section>
+
+
+
     </main>
+
+    <main class="hidden">
+
+    </main>
+
     <script type="text/javascript" src="./assets/js/googleGeocodeAPI.js"></script>
     <script type="text/javascript" src="./assets/js/abstractAPI.js"></script>
-    <script type="text/javascript" src="./assets/js/amadeus.js"></script>
+    <script type="text/javascript" src="./assets/js/amadeusAPI.js"></script>
+    <script type="text/javascript" src="./assets/js/unsplashAPI.js"></script>
     <script type="text/javascript" src="./assets/js/script.js"></script>
   </body>
 </html>
