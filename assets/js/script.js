@@ -4,6 +4,7 @@ const navBar = document.querySelector("#navBoxId");
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
 const phoenixSky = document.querySelector("#phoenixSky");
+const p1SubBtn = document.querySelector("#p1SubBtn");
 
 let homeCity = document.querySelector("#homeCity");
 let homeState = document.querySelector("#homeState");

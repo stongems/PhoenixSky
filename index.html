@@ -36,12 +36,14 @@
     <!-- Website without location in Local Storage -->
 
     <!-- *change main ID to p1Home && p1HomeBoxfrom !noHome* -->
-    <main id="p1HomeBox" class="hidden">
+    <main>
       <!-- CONSOLODATED p1Home + p1HomeBox original code here -><section id="p1HomeBox"><<<<<<< -->
       <!-- logoP1 unused -->
-      <a id="logoP1" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a>
-      <div>
-        <form>
+      <div class="homepage hidden">
+        <a id="logoP1" class="logo" href="#">
+          <h1><span id="phx">Phoenix</span>Sky</h1></a
+        >
+        <form class='homepage-form'>
           <input id="homeCity" placeholder="Enter Home City" />
           <select id="homeState">
             <option value="no">Select Home State</option>
@@ -97,7 +99,7 @@
             <option>Wisconsin</option>
             <option>Wyoming</option>
           </select>
-          <button id="p1SubmitBtn" onclick="">Submit</button>
+          <button class="btn" id="p1SubBtn">Submit</button>
         </form>
       </div>
     </main>

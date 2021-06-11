@@ -1,8 +1,9 @@
 :root {
-  --theme-light: #e0e0e0;
+  --theme-light: #ffffff;
   --theme-dark: #303030;
   --theme-yellow: #ffc700;
   --theme-blue: #4682b4;
+  --theme-trans-blue: rgba(66, 133, 244, 0.9);
 }
 /* ::selection {} */
 
@@ -12,9 +13,22 @@ html {
 }
 body {
   font-family: sans-serif;
+  background: url(../img/Phoenix\ SKy.jpg) no-repeat;
+  background-size: cover;
   background-color: black;
   color: var(--theme-light);
 }
+
+/* body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0);
+} */
+
 nav ul li {
   padding: 15%;
 }
@@ -35,6 +49,107 @@ li a:active {
 .hidden {
   display: none;
 }
+
+main {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  height: 100vh;
+}
+
+.homepage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3rem;
+  width: 15rem;
+  border-radius: 5%;
+  background: var(--theme-trans-blue);
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(225, 227, 238),
+    0rem 0rem 1.75rem rgb(255, 255, 255);
+}
+
+.homepage a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  padding-top: 0;
+  margin: 0;
+}
+
+/*********************Tutor Notes******************************* */
+/* .homepage a::before {
+  content: "fly";
+  color:coral;
+  position: absolute;
+  top: 65px;
+  left: -50px;
+  height: 50px;
+  width: 50px;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+.homepage a::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 7, 7, 0.0);
+  } */
+
+.homepage-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#homeCity,
+#homeState {
+  border: solid var(--Sky) 3.5px;
+  /*******************TEMP********************/
+  border: solid rgb(255, 255, 255);
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--theme-blue);
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  padding: 1.5%;
+  margin: 0.5rem;
+}
+
+/* Button appearance settings*/
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: var(--theme-yellow);
+  border-radius: 10px;
+  color: var(--theme-dark);
+  font-size: 22px;
+  line-height: 22px;
+  margin: 16px 16px 16px 20px;
+  padding: 14px 34px;
+
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+}
+.btn:hover {
+  background-color: var(--theme-light);
+  color: var(--theme-dark);
+}
+
+/* .btn:active {
+  background-color: var(--theme-light);
+  color: var(--Sky);
+} */
 
 /* Logo settings */
 .logo {
@@ -122,64 +237,8 @@ li a:active {
 #closeBtn:hover {
   opacity: 50%;
 }
-/* ///??? */
+
 #clearHome:hover {
   background-color: #ff4500;
   color: var(--theme-dark);
-}
-/* *******REMOVED TO p1HomeBox */
-/* Website without location in Local Storage */
-/* #p1Home {
-  display: flex;
-  justify-content: center;
-  padding-top: 250px;
-  
-  /* p1HomeBox use enter style sheet */
-
-main {
-}
-#p1HomeBox {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  width: 15rem;
-  
-  
-
-  /* left 50% and margin-left: -225px (half width) will position the box in the middle of the screen. */
-  padding: 42px;
-  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(225, 227, 238),
-    0rem 0rem 5rem rgb(14, 47, 233);
-  border-radius: 5%;
-  background: var(--theme-blue);
-}
-#homeCity,
-#homeState {
-  border: solid var(--Sky) 3.5px;
-  /*******************TEMP********************/
-  border: solid rgb(115, 255, 80);
-  text-align: center;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--theme-blue);
-  border-radius: 0.4rem;
-  font-size: 0.8rem;
-  padding: 1.5%;
-  margin: 0.5rem;
-}
-
-/* Button appearance settings*/
-#p1SubmitBtn {
-  border: none;
-  padding: 5px;
-  margin: 5px;
-  background-color: var(--Sky);
-  color: var(--theme-light);
-  border-radius: 5%;
-}
-
-#p1SubmitBtn:active {
-  background-color: var(--theme-light);
-  color: var(--Sky);
 }
