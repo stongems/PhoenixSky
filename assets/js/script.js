@@ -1,7 +1,7 @@
 const openNavBarBtn = document.querySelector("#openNavBarBtn");
 const closeNavBarBtn = document.querySelector("#closeNavBarBtn");
 const navBarMenu = document.querySelector("#navBarMenu");
-const p1SubBtn = document.querySelector("#p1SubmitBtn"); 
+const p1SubBtn = document.querySelector("#p1SubBtn"); 
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
 
