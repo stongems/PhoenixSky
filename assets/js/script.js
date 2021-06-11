@@ -1,10 +1,9 @@
-const btn2open = document.querySelector("#openBtn");
-const btn2close = document.querySelector("#closeBtn");
-const navBar = document.querySelector("#navBoxId");
+const openNavBarBtn = document.querySelector("#openNavBarBtn");
+const closeNavBarBtn = document.querySelector("#closeNavBarBtn");
+const navBarMenu = document.querySelector("#navBarMenu");
 const p1SubBtn = document.querySelector("#p1SubmitBtn"); 
 const clearHome = document.querySelector("#clearHome");
 const clearHome2 = document.querySelector("#clearHome2");
-
 
 let homeCity = document.querySelector("#homeCity");
 let homeState = document.querySelector("#homeState");
@@ -188,7 +187,17 @@ enterHomeInfo();
   
 });
 
+openNavBarBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  openNavBarBtn.classList.add("hidden");
+  navBarMenu.classList.remove("hidden");
+});
 
+closeNavBarBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  navBarMenu.classList.add("hidden");
+  openNavBarBtn.classList.remove("hidden");
+});
 
 clearHome2.addEventListener
 (
@@ -200,14 +209,3 @@ console.log();
 window.location.reload();
 }
 );
-
-btn2open.addEventListener("click", function (e) {
-  e.preventDefault();
-  btn2open.classList.add("hidden");
-  navBar.classList.remove("hidden");
-});
-btn2close.addEventListener("click", function (e) {
-  e.preventDefault();
-  navBar.classList.add("hidden");
-  btn2open.classList.remove("hidden");
-});
