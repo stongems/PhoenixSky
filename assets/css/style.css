@@ -111,7 +111,7 @@ opacity: 50%;
 }
 
 /* Website without location in Local Storage */
-#noHome{
+#p1Home{
 display: flex;
 justify-content: center;
 padding-top: 250px;
@@ -125,7 +125,7 @@ padding: 1.5%;
 margin: 5px;
 }
 
-#noHomeBox{
+#p1HomeBox{
 display: flex;
 align-items: center;
 justify-content: center;
