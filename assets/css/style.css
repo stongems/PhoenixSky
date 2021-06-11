@@ -68,8 +68,8 @@ main {
   width: 15rem;
   border-radius: 5%;
   background: var(--theme-trans-blue);
-  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(225, 227, 238),
-    0rem 0rem 1.75rem rgb(255, 255, 255);
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(94, 110, 201),
+    0rem 0rem 300rem rgb(0, 0, 0);
 }
 
 .homepage a {
@@ -132,7 +132,7 @@ main {
   border: none;
   background-color: var(--theme-yellow);
   border-radius: 10px;
-  color: var(--theme-dark);
+  color: var(--theme-);
   font-size: 22px;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
