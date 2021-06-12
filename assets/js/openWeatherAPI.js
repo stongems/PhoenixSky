@@ -1,4 +1,9 @@
-let userDestination;
+// let rawUserInput = localStorage.getItem("UserDestination") || "arizona";
+// let firstPass = rawUserInput.replace('"','');
+// let finalInput = firstPass.replace('"','');
+
+let userDestination = finalInput;
+
 const recentCities = JSON.parse(localStorage.getItem("recentCities")) || [];
 
 function getDestLongLat() {
