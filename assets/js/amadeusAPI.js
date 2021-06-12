@@ -5,7 +5,7 @@ let departureDate;
 let destLat;
 let destLong;
 
-// function dummy(){
+function getAccessToken() {
 fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
   body: "grant_type=client_credentials&client_id=2fdNuvibX2M6d60L6dMzYlpxkH1jV4wg&client_secret=wFgzffD956eN8Aau",
   headers: {
@@ -15,12 +15,14 @@ fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
 })
   .then((res) => res.json())
   .then((data) => {
-    access_token = data.access_token;
-    getFlightOffers(access_token);
+    const access_token = data.access_token;
+    console.log (access_token)
   });
+}
 // }
 
-function getFlightOffers(token) {
+function getFlightOffers() {
+  getAccessToken()
   getOriginLocationCode();
   getDestinationLocationCode();
   fetch(
@@ -33,7 +35,7 @@ function getFlightOffers(token) {
       ``,
     {
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + access_token,
       },
     }
   )
@@ -45,7 +47,7 @@ function getFlightOffers(token) {
     });
 }
 
-function getFlightOffers(token) {
+function getFlightOffers() {
   getOriginLocationCode();
   getDestinationLocationCode();
   fetch(
@@ -58,7 +60,7 @@ function getFlightOffers(token) {
       ``,
     {
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + access_token,
       },
     }
   )
@@ -70,9 +72,9 @@ function getFlightOffers(token) {
     });
 }
 
-function getOriginLocationCode(token) {
+function getOriginLocationCode() {
   getUserLat();
-  getUserLong();
+  setTimeout(() => {getUserLong();},1300);
   fetch(
     `https://test.api.amadeus.com/v1/reference-data/locations/airports
         ?latitude=` +
@@ -83,7 +85,7 @@ function getOriginLocationCode(token) {
         page[limit]=1`,
     {
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + access_token,
       },
     }
   )
