@@ -61,6 +61,7 @@ function getUserLat() {
     .then((res) => res.json())
     .then((data) => {
       userLat = data.latitude;
+      console.log("lat is a go");
       return userLat;
     });
 }
@@ -71,6 +72,7 @@ function getUserLong() {
     .then((res) => res.json())
     .then((data) => {
       userLong = data.longitude;
+      console.log("long is a go")
       return userLong;
     });
 }
