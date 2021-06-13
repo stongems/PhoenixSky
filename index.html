@@ -10,30 +10,59 @@
   </head>
   <body id="phoenixSky">
     
-    <!-- Nav Bar -->
-    <aside id="navBar">
-      
-      <!-- When Nav Bar is Closed -->
-      <button class="airPlaneBtn" id="openNavBarBtn">
-        <img src="./assets/img/zoom.png" alt="Nav Button" />
+    <!-- Website with location in Local Storage-->
+
+    <main id="p1logo" class="page-container">
+      <!-- div added -->
+      <div>
+        <h1><a id="logoP2" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a></h1>
+        <!-- ******SEARCHBAR BELOW******* -->
+      </form>
+    </div>
+    
+    <!-- Moved out of new div with p2logo -->
+    <form class="search-bar">
+      <input id="destinationID" type="text" placeholder="Enter Home Destination">
+      <button class="btn" id="p1SubBtn">Submit</button>
+      <section>
+        <!-- for weather -->   
+      </section>
+      <section>
+        <!-- for flight data output -->
+      </section>
+      <section>
+        <!-- for images -->
+      </section>
+  </main>
+
+
+
+
+    <div d="navBar">
+     <!-- When Nav Bar is Closed -->
+     <button class="airPlaneBtn header-container" id="openNavBarBtn">
+       <img src="./assets/img/zoom.png" alt="Nav Button" />
       </button>
-
-
+      
+      
       <!-- When Nav Bar is Open -->
-      <nav class="navBarMenu hidden" id="navBarMenu">
+      <div class="navBarMenu hidden" id="navBarMenu">
         
         <button class="navBtn" id="closeNavBarBtn">
           <img src="./assets/img/zoom2.png" alt="Nav Button" />
         </button>
-
+        
         <ul id="menu" class="navMenu">
           <li id="about"><a href="#" class="navOption">About US</a></li>
           <li id="resources"><a href="#" class="navOption">Resources</a></li>
           <li id="contact"><a href="#" class="navOption">Contact US</a></li>
         </ul>
-      </nav>
+      </div>
 
+      </div>
+      
     </aside>
+    
 
 
     <!-- Website with location in Local Storage-->

@@ -58,6 +58,23 @@ main {
   height: 100vh;
 }
 
+.header-container {
+  width: 100%;
+  border: solid #303030;
+}
+
+.page-container {
+  color:red;
+  border: solid #ff4500;
+  position: relative;
+  height: 100rem;
+  top:-50%;
+  left: 0%;
+
+}
+
+
+
 .homepage {
   display: flex;
   justify-content: center;
@@ -82,37 +99,10 @@ main {
   margin: 0;
 }
 
-/*********************Tutor Notes******************************* */
-/* .homepage a::before {
-  content: "fly";
-  color:coral;
-  position: absolute;
-  top: 65px;
-  left: -50px;
-  height: 50px;
-  width: 50px;
-  background-color: rgba(255, 255, 255, 0.0);
-}
-.homepage a::after {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    height: 50px;
-    width: 50px;
-    background-color: rgba(255, 7, 7, 0.0);
-  } */
 
-.homepage-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
-#homeCity,
-#homeState {
-  border: solid var(--Sky) 3.5px;
-  /*******************TEMP********************/
+
+.search-bar {
   border: solid rgb(255, 255, 255);
   text-align: left;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
