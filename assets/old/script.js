@@ -18,10 +18,11 @@ p1SubBtn.addEventListener("click", function (e)
   {
     localStorage.setItem("UserDestination", JSON.stringify(destinationID.value));
     //FUNCTION TRIGGERS FOR API, WILL START ON BUTTON CLICK. USE>>> localStorage.getItem("UserDestination") <<<TO PULL USER INPUT TEXT.
-    // runOpenWeatherAPI();
-    // runAbstractAPI();
-    // runAmadeusAPI();
-    // runUnspashAPI();
+    
+    getDestLongLat();
+
+
+
     // window.location.reload(); //<<<<<<<<<<<<<<<<<!!!!PAGE REFRESHES HERE ON SUBMIT!!!! if something is broken try removing this
   };
 });
