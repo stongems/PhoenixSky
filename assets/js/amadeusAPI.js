@@ -3,6 +3,7 @@ let departureDate = "2021-06-30";
 let destLat;
 let destLong;
 
+
 function getAccessToken(){
   fetch("https://test.api.amadeus.com/v1/security/oauth2/token", {
     body: "grant_type=client_credentials&client_id=2fdNuvibX2M6d60L6dMzYlpxkH1jV4wg&client_secret=wFgzffD956eN8Aau",
@@ -80,6 +81,7 @@ function getDestinationLocationCode(token) {
     });
 }
 
-p1SubBtn.addEventListener("click", getFlightOffers());
+
+
 
 
