@@ -7,8 +7,6 @@ let finalInput = firstPass.replace('"','');
 let queryPart1 = finalInput;
 let queryPart2 = "landscape";
 
-// let bgImg = data.urls.full || null;
-
 let phoenixSkyBG = 
 `https://api.unsplash.com/photos/random?client_id=
 ${unsplashKey}
@@ -28,21 +26,9 @@ fetch(phoenixSkyBG)
 })
 .then(data => {
     console.log("NO-LS: ", phoenixSkyBG);
-    // phoenixSkyBGimg(data);
     phoenixSkyBGimgHQ(data)
 });
 
-// function runUnsplashAPI(userInput) {
+function runUnsplashAPI(userInput) {
 
-// }
-
-
-
-
-
-// function phoenixSkyBGimg(data) {
-//     let bgImg = data.urls.regular;
-//     console.log(bgImg);
-//     document.body.style.background = "url('"+bgImg+"')";
-//     document.body.style.backgroundSize = "cover";       
-// };
+}

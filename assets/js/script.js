@@ -6,8 +6,10 @@ const destinationID = document.querySelector("#destinationID");
 
 // USER TEXT INPUT SAVE AND SUBMIT BUTTON
 p1SubBtn.addEventListener("click", function (e) 
+
 {
   e.preventDefault();
+  
   if (destinationID.value == "") 
   {
     console.log("I cant do that Dave");
