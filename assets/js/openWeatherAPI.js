@@ -1,6 +1,6 @@
 // let rawUserInput = localStorage.getItem("UserDestination") || "arizona";
-// let firstPass = rawUserInput.replace('"','');
-// let finalInput = firstPass.replace('"','');
+// let firstPass = rawUserInput.replace('"',"");
+// let finalInput = firstPass.replace('"',"");
 
 let userDestination = finalInput;
 
@@ -14,12 +14,11 @@ function getDestLongLat() {
     .then((res) => res.json())
     .then(handleWeatherData);
 
-  function handleWeatherData(data) {
+  return function handleWeatherData(data) {
     const city = data[0];
     delete city.local_names;
     recentCities.push(city);
     localStorage.setItem("recentCities", JSON.stringify(recentCities));
-    // fetch other api endpoints
   }
 }
 

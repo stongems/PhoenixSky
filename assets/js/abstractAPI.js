@@ -2,8 +2,6 @@ let userIpAddress;
 let userCity;
 let userRegion;
 let userTimezone;
-let userLat;
-let userLong;
 
 function getIpAddress() {
   var url = `https://ipgeolocation.abstractapi.com/v1/?api_key=6628343940ed44a69b857eae1de5d184&fields=ip_address,`;
@@ -54,25 +52,13 @@ function getTimezone() {
     });
 }
 
-function getUserLat() {
-  var url = `https://ipgeolocation.abstractapi.com/v1/?api_key=6628343940ed44a69b857eae1de5d184&fields=latitude,`;
+function getUserLatLong() {
+  var url = `https://ipgeolocation.abstractapi.com/v1/?api_key=6628343940ed44a69b857eae1de5d184&fields=latitude,longitude`;
 
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      userLat = data.latitude;
-      console.log("lat is a go");
-      return userLat;
-    });
-}
-function getUserLong() {
-  var url = `https://ipgeolocation.abstractapi.com/v1/?api_key=6628343940ed44a69b857eae1de5d184&fields=longitude,`;
-
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      userLong = data.longitude;
-      console.log("long is a go")
-      return userLong;
+      localStorage.setItem("userLat" , data.latitude)
+      localStorage.setItem("userLong" , data.longitude)
     });
 }
