@@ -4,97 +4,64 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>PhoenixSky</title>
   </head>
-  <body id="phoenixSky">
-    
-    <!-- Website with location in Local Storage-->
-
-    <main id="p1logo" class="page-container">
-      <!-- div added -->
-      <div>
-        <h1><a id="logoP2" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a></h1>
-        <!-- ******SEARCHBAR BELOW******* -->
-      </form>
-    </div>
-    
-    <!-- Moved out of new div with p2logo -->
-    <form class="search-bar">
-      <input id="destinationID" type="text" placeholder="Enter Home Destination">
-      <button class="btn" id="p1SubBtn">Submit</button>
-      <section>
-        <!-- for weather -->   
-      </section>
-      <section>
-        <!-- for flight data output -->
-      </section>
-      <section>
-        <!-- for images -->
-      </section>
-  </main>
-
-
-
-
-    <div d="navBar">
-     <!-- When Nav Bar is Closed -->
-     <button class="airPlaneBtn header-container" id="openNavBarBtn">
-       <img src="./assets/img/zoom.png" alt="Nav Button" />
-      </button>
+  
+  
+  
+  
+  
+  
+  <!-- ID used for script -->
+  <body class="flexbox-item-3"></div>
+    <!-----------------HEADER-------------------------->
+    <main class="">
+      <header class="Header-container">
+        <h1><a id="logoP2" class="logo" href="#"><span id="phx">Phoenix</span>Sky</a>
+        </h1>
+        <button id="openNavBarBtn"> <img src="./assets/img/zoom2.png" alt="Nav Button" /></button>
+        <div class="navBarMenu  hidden" id="navBarMenu">
+          <button class="navBtn" id="closeNavBarBtn"><img src="./assets/img/zoom2.png" alt="Nav Button"> </button>
+          <ul id="menu" class="navMenu">
+            <li id="about"><a href="#" class="navOption">About US</a></li>
+            <li id="resources"><a href="#" class="navOption">Resources</a></li>
+            <li id="contact"><a href="#" class="navOption">Contact US</a></li>
+          </ul>
+        </div>
+      </header>
       
-      
-      <!-- When Nav Bar is Open -->
-      <div class="navBarMenu hidden" id="navBarMenu">
-        
-        <button class="navBtn" id="closeNavBarBtn">
-          <img src="./assets/img/zoom2.png" alt="Nav Button" />
-        </button>
-        
-        <ul id="menu" class="navMenu">
-          <li id="about"><a href="#" class="navOption">About US</a></li>
-          <li id="resources"><a href="#" class="navOption">Resources</a></li>
-          <li id="contact"><a href="#" class="navOption">Contact US</a></li>
-        </ul>
-      </div>
-
-      </div>
-      
-    </aside>
-    
-
-
-    <!-- Website with location in Local Storage-->
-    <main id="p1logo" class="">
+        <div id ="buttons">
+          <div  class="header-container hidden" id="navBar">
+          </div>
+          
+          </main>
+          </div>
+          
+          <main>
+            <div class="search-container">
+              <!-- Moved out of new div with p2logo -->
+              <form class="search-bar">
+                <input id="destinationID" type="text" placeholder="Enter Home Destination">
+                </form>
+                <div>
+                <button class="btn" id="p1SubBtn">Submit</button>
+                <button class="btn" id="button1">Flights</button>
+              <button class="btn" id="button2">Images</button>
+            </div>
+            <!-------------- CONTAINER #3 ------------------->
       <!-- refresh and resubmit information in local storage to API -->
-      
-      <!-- MAIN SUBMIT BUTTON -->
-      <form> 
-        <input id="destinationID" type="text" placeholder="Enter Destination">
-        <button class="btn" id="p1SubBtn">Submit</button>
-      </form>
-
-      <!-- Other buttons tbd -->
-      <form  class="hidden" id="buttons">
-        <button class="btn" id="button1">thing 1</button>
-        <button class="btn" id="button2">thing 2</button>
-
-      </form>
-
-
       <section class="hidden" id="weatherSection">
-        <!-- for weather -->
       </section>
+      <!-- for flight data output -->
       <section class="hidden" id="flightSection">
-        <!-- for flight data output -->
       </section>
+      <!-- for images -->
       <section class="hidden" id="imageSection">
-        <!-- for images -->
       </section>
-
-
-
     </main>
 
 
@@ -102,15 +69,25 @@
       <!-- About us Page-->
     </main>
 
-    <main class="hidden" id="resourcesPage">
+<main class="hidden" id="resourcesPage">
       <!-- Resources Page-->
     </main>
 
-    <main class="hidden" id="contactPage">
+<main class="hidden" id="contactPage">
       <!-- Contact us Page -->
     </main>
 
-
+  
+    
+    <div class="flexbox-item-4"></div>
+    
+    
+    
+    
+    <footer>
+    <div class="flexbox-item-5"></div>
+    
+</footer>
 
     <script type="text/javascript" src="./assets/js/unsplashAPI.js"></script>
     <script type="text/javascript" src="./assets/js/openWeatherAPI.js"></script>

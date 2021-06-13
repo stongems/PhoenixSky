@@ -5,29 +5,18 @@
   --theme-blue: rgba(66, 133, 244, 0.9);
   --theme-trans-blue: rgba(66, 133, 244, 0.9);
 }
-/* ::selection {} */
 
-/* sudo classes */
 html {
   scroll-behavior: smooth;
 }
 body {
+  
   font-family: sans-serif;
   background: url(../img/Phoenix\ SKy.jpg) no-repeat;
   background-size: cover;
   background-color: black;
   color: var(--theme-light);
 }
-
-/* body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0);
-} */
 
 nav ul li {
   padding: 15%;
@@ -50,30 +39,48 @@ li a:active {
   display: none;
 }
 
-main {
+.Header-container {
   display: flex;
-  align-items: center;
-  margin: auto;
+  flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  align-items: flex-start;
+  width: 100vw;
+  height: 10em;
+  margin: 0;
+  padding: 0;
+  background: rgba(66, 133, 244, 0.5);
 }
 
-.header-container {
-  width: 100%;
-  border: solid #303030;
+.flexbox-container {
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/* .flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background: rgba(66, 133, 244, 0.5);
+} */
+
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30rem;
+  width: 20rem;
+  padding: auto;
+  margin: auto;
+
 }
 
-.page-container {
-  color:red;
-  border: solid #ff4500;
-  position: relative;
-  height: 100rem;
-  top:-50%;
-  left: 0%;
-
+.flexbox-item-3 {
+  min-height: 300px;
 }
-
-
 
 .homepage {
   display: flex;
@@ -99,9 +106,6 @@ main {
   margin: 0;
 }
 
-
-
-
 .search-bar {
   border: solid rgb(255, 255, 255);
   text-align: left;
@@ -113,7 +117,6 @@ main {
   margin: 0.5rem;
 }
 
-/* Button appearance settings*/
 .btn {
   display: flex;
   align-items: center;
@@ -136,21 +139,10 @@ main {
   color: var(--theme-blue);
 }
 
-/* Logo settings */
 .logo {
   text-decoration: none;
   color: var(--theme-light);
   font-size: 150%;
-}
-
-#logoP2 {
-  position: absolute;
-  top: 2.5%;
-  left: 2.5%;
-}
-
-#logoP2:active {
-  color: var(--Sky);
 }
 
 #phx {
@@ -183,8 +175,22 @@ main {
 .navBtn:active {
   opacity: 50%;
 }
+.navBarMenu {
+  position: absolute;
+  right: 0%;
+  background: var(--theme-blue);
+  color: var(--theme-dark);
+  height: 17%;
+  width: 20%;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family:'Roboto', sans-serif;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(94, 110, 201),
+    0rem 0rem 0.6rem rgb(94, 110, 201);
+}
 
 #openNavBarBtn {
+  justify-content: center;
   position: absolute;
   right: 0%;
   border: none;
@@ -195,18 +201,7 @@ main {
   cursor: pointer;
   transition: ease-in-out 0.3s;
   box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(94, 110, 201),
-    0rem 0rem 5rem rgb(0, 0, 0);
-}
-
-.navBarMenu {
-  position: absolute;
-  right: 0%;
-  background: var(--theme-blue);
-  color: var(--theme-dark);
-  height: 100%;
-  width: 20%;
-  font-size: 1.25rem;
-  font-weight: bold;
+    0rem 0rem 0.6rem rgb(94, 110, 201);
 }
 
 #closeNavBarBtn {
@@ -214,8 +209,8 @@ main {
   border: none;
   padding: 5%;
 }
-#openNavBarBtn:hover{
-
+#openNavBarBtn:hover {
+  opacity: 50%;
 }
 #closeNavBarBtn:hover {
   opacity: 50%;
