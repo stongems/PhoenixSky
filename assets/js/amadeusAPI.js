@@ -84,6 +84,3 @@ function getOriginLocationCode() {
 p1SubBtn.addEventListener("click", getFlightOffers())
 
 
-
-
-
