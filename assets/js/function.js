@@ -12,7 +12,7 @@ p1SubBtn.addEventListener("click", function (e)
   {//<< CONSOLE LOG IF #destinationID IS LEFT BLANK >>
     console.log("I cant do that Dave"); 
   }
-
+  
   else if (destinationID.value !== "") 
   {//<< WHAT HAPPENS WHEN INFORMATION IS ENTERED >>
     let now = new Date().toISOString().slice(0, 10);
@@ -20,6 +20,8 @@ p1SubBtn.addEventListener("click", function (e)
     localStorage.setItem("USERinput", JSON.stringify(destinationID.value));
     runAbstractAPI();
     runUnsplashAPI();
+    removeWeatherCards()
+    removeFlightInfo();       
   };
 }
 );
@@ -47,7 +49,7 @@ function runAbstractAPI() {
       // localStorage.setItem("userSC", data.region_iso_code)
       // localStorage.setItem("userTIMEZONE", data.timezone.abbreviation)
     };
-
+    
     runCurrentLocation();
   })};
 
@@ -70,8 +72,8 @@ function runCurrentLocation(){
       localStorage.setItem("userTEMPERATURE", data.main.temp)
       localStorage.setItem("userFEELSLIKE", data.main.feels_like)
       localStorage.setItem("userHUMIDITY", data.main.humidity)
-      runDestination();        
-      // makeWeatherCard(data);
+      runDestination();
+      createWeatherCardUser();
     }); 
 };
 
@@ -99,8 +101,7 @@ function runDestination(){
           // localStorage.setItem("destinationSTATE", data.x)
           // localStorage.setItem("destinationSC", data.x)
           // localStorage.setItem("destinationTIMEZONE", data.x)        
-
-        // makeWeatherCard(data);
+        createWeatherCardDest();
     }); 
   };
 
@@ -165,6 +166,6 @@ fetch(
     .then(function (flightData) {
       console.log("FLIGHT INFO: ",flightData);
 
-      // createFlightHtml(flightData);
+      createUserFlight(flightData)
     });
 }
