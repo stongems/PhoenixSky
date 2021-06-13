@@ -38,55 +38,41 @@ function getIpAddress(){
   function getUserRegion(){
     var url = `https://ipgeolocation.abstractapi.com/v1/
   ?api_key=6628343940ed44a69b857eae1de5d184&
-  fields=region,`
+  fields=region`
   
         fetch(url)
         .then((res) => res.json())
         .then(data => {
             userRegion = data.region
-            console.loguserRegion
+            console.log(userRegion)
                 return userRegion
         })
     }
   
     
     function getTimezone(){
-        var url = `https://ipgeolocation.abstractapi.com/v1/
-    ?api_key=6628343940ed44a69b857eae1de5d184&
-    fields=timezone,`
+        var url = `https://ipgeolocation.abstractapi.com/v1/?api_key=6628343940ed44a69b857eae1de5d184&fields=timezone`
     
             fetch(url)
             .then((res) => res.json())
             .then(data => {
+              console.log(data)
                 userTimezone = data.timezone.abbreviation
-                console.log(userTimezone)
+              
                     return userTimezone
             })
   }
   
   function getUserLat(){
-    var url = `https://ipgeolocation.abstractapi.com/v1/
-  ?api_key=6628343940ed44a69b857eae1de5d184&
-  fields=latitude,`
+    var url = `https://ipgeolocation.abstractapi.com/v1/?api_key=6628343940ed44a69b857eae1de5d184&fields=latitude`
   
-        fetch(url)
-        .then((res) => res.json())
-        .then(data => {
-            userLat = data.latitude
-            console.log(userLat)
-                return userLat
-        })
+     return   fetch(url) .then((res) => res.json())
+         
   }
   function getUserLong(){
-    var url = `https://ipgeolocation.abstractapi.com/v1/
-  ?api_key=6628343940ed44a69b857eae1de5d184&
-  fields=longitude,`
+    var url = `https://ipgeolocation.abstractapi.com/v1/?api_key=6628343940ed44a69b857eae1de5d184&fields=longitude`
   
-        fetch(url)
+     return   fetch(url)
         .then((res) => res.json())
-        .then(data => {
-            userLong = data.longitude
-            console.log(userLong)
-                return userLong
-        })
+        
   }
