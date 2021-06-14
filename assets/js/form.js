@@ -1,3 +1,20 @@
+const flightSection = document.getElementById("flightSection");
+const price = document.createElement("h3");
+const carrier = document.createElement("p");
+const flightNumber = document.createElement("p");
+const departTime = document.createElement("p");
+const arrivalTime = document.createElement("p");
+const userAirportIATA = document.createElement("p");
+const destAirportIATA = document.createElement("p");
+const flightCard = document.createElement("div");
+const price2 = document.createElement("h3");
+const carrier2 = document.createElement("p");
+const flightNumber2 = document.createElement("p");
+const departTime2 = document.createElement("p");
+const arrivalTime2 = document.createElement("p");
+const userAirportIATA2 = document.createElement("p");
+const destAirportIATA2 = document.createElement("p");
+const flightCard2 = document.createElement("div");
 const openNavBarBtn = document.querySelector("#openNavBarBtn");
 const closeNavBarBtn = document.querySelector("#closeNavBarBtn");
 const navBarMenu = document.querySelector("#navBarMenu");
@@ -55,7 +72,7 @@ weather.textContent = localStorage.getItem("userWEATHER")
 feels.textContent = localStorage.getItem("userFEELSLIKE")
 humid.textContent = localStorage.getItem("userHUMIDITY")
 let weatherIcon = `http://openweathermap.org/img/w/${localStorage.getItem("userICON")}.png`;
-    icon.src = weatherIcon
+icon.src = weatherIcon
 }
 
 function createWeatherCardDest(){
@@ -82,62 +99,74 @@ function createWeatherCardDest(){
     feels.textContent = localStorage.getItem("destinationFEELSLIKE");
     humid.textContent = localStorage.getItem("destinationHUMIDITY");
     let weatherIcon = `http://openweathermap.org/img/w/${localStorage.getItem("userICON")}.png`;
-        icon.src = weatherIcon
+    icon.src = weatherIcon
 }
 
+function removeFlightInfo(){
+    let info = document.getElementById("flightCardInfo");
+    info.parentNode.removeChild(info);
+}
+function createUserFlight() {
+    flightSection.classList.remove("hidden");
+    flightCard.setAttribute("id","flightCardInfo");
+    price.textContent="$:"+localStorage.getItem("flightPRICE")
+    carrier.textContent=localStorage.getItem("flightCARRIER")
+    flightNumber.textContent=localStorage.getItem("flightNUMBER")
+    departTime.textContent="Departs: "+localStorage.getItem("flightDEPARTTIME")
+    arrivalTime.textContent="Arrives: "+localStorage.getItem("flightARRIVALTIME")
+    userAirportIATA.textContent="Departs from: "+localStorage.getItem("flightUSERAITA")
+    destAirportIATA.textContent="Arrives at: "+localStorage.getItem("flightDESTAITA")
+    flightSection.append(flightCard)
+    flightCard.append(price)
+    flightCard.append(carrier)
+    flightCard.append(flightNumber)
+    flightCard.append(departTime)
+    flightCard.append(arrivalTime)
+    flightCard.append(userAirportIATA)
+    flightCard.append(destAirportIATA)
+    createUserFlight2()
+}
+
+function createUserFlight2() {
+    flightSection.classList.remove("hidden");
+    flightCard2.setAttribute("id","flightCardInfo2");
+    price2.textContent="$:"+localStorage.getItem("flightPRICE2")
+    carrier2.textContent=localStorage.getItem("flightCARRIER2")
+    flightNumber2.textContent=localStorage.getItem("flightNUMBER2")
+    departTime2.textContent="Departs: "+localStorage.getItem("flightDEPARTTIME2")
+    arrivalTime2.textContent="Arrives: "+localStorage.getItem("flightARRIVALTIME2")
+    userAirportIATA2.textContent="Departs from: "+localStorage.getItem("flightUSERAITA2")
+    destAirportIATA2.textContent="Arrives at: "+localStorage.getItem("flightDESTAITA2")
+    flightSection.append(flightCard2)
+    flightCard2.append(price2)
+    flightCard2.append(carrier2)
+    flightCard2.append(flightNumber2)
+    flightCard2.append(departTime2)
+    flightCard2.append(arrivalTime2)
+    flightCard2.append(userAirportIATA2)
+    flightCard2.append(destAirportIATA2)
+    
+}
 function removeWeatherCards(){
-let user = document.getElementById("userWeatherCardInfo");
+let user = document.getElementById("userWeatherCardInfo")
 user.parentNode.removeChild(user);
-let dest = document.getElementById("destWeatherCardInfo");
+let dest = document.getElementById("destWeatherCardInfo")
 dest.parentNode.removeChild(dest);
 }
-function removeFlightInfo(){
-let info = document.getElementById("flightCardInfo");
-info.parentNode.removeChild(info);
-}
-//create flight
-function createUserFlight(data) {
-    // for (let i = 0; i < data.data.length; i++) {
-    //     const flightData = data.data[i];
-        
-    
-        let flightData = data;
-        console.log("if you see this then it made it ", flightData)
-            const flightSection = document.getElementById("flightSection");
-            flightSection.classList.remove("hidden");
-            const flightCard = document.createElement("div");
-            flightCard.setAttribute("class","flightCardInfo");
-            const price = document.createElement("h3");
-            const carrier = document.createElement("p");
-            const flightNumber = document.createElement("p");
-            const departTime = document.createElement("p");
-            const arrivalTime = document.createElement("p");
-            const userAirportIATA = document.createElement("p");
-            const userTerminal = document.createElement("p");
-            const destAirportCode = document.createElement("p");
-            const destTerminal = document.createElement("p");
-            flightSection.append(flightCard);
-            flightCard.append(price);
-            flightCard.append(carrier);
-            flightCard.append(flightNumber);
-            flightCard.append(departTime);
-            flightCard.append(arrivalTime);
-            flightCard.append(userAirportIATA);
-            flightCard.append(userTerminal);
-            flightCard.append(destAirportCode);
-            flightCard.append(destTerminal);
-            price.textContent = flightData.data[0].price.total
-            carrier.textContent = flightData.data[0].itineraries[0].segments[0].carrierCode
-            flightNumber.textContent = flightData.data[0].itineraries[0].segments[0].number
-            departTime.textContent = flightData.data[0].itineraries[0].segments[0].departure.at
-            arrivalTime.textContent = flightData.data[0].itineraries[0].segments[0].arrival.at
-            userAirportIATA.textContent = flightData.data[0].itineraries[0].segments[0].departure.iataCode
-            userTerminal.textContent = flightData.data[0].itineraries[0].segments[0].arrival.terminal
-            destAirportCode.textContent = flightData.data[0].itineraries[0].segments[0].arrival.iataCode
-            destTerminal.textContent = flightData.data[0].itineraries[0].segments[0].arrival.terminal 
 
-            }
-    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -154,4 +183,4 @@ function createUserFlight(data) {
 //     e.preventDefault();
 //     navBarMenu.classList.add("hidden");
 //     openNavBarBtn.classList.remove("hidden");
-//   });
+//   
