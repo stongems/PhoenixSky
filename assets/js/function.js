@@ -62,7 +62,7 @@ function runCurrentLocation(){
   
   console.log("USER city: ",city)
   
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`)
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`)
   .then(res => {
     return res.json()})
     .then(data => {  
@@ -84,7 +84,7 @@ function runDestination(){
 
     console.log("DEST city: ",city)
     
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=imperial`)
     .then(res => {
       return res.json()})
       .then(data => {  
