@@ -18,12 +18,21 @@ function getAccessToken() {
 }
 
 async function getFlightOffers() {
+<<<<<<< HEAD:assets/js/amadeusAPI.js
   getAccessToken();
   await getOriginLocationCode();
 
   let access_token = localStorage.getItem("Access_Token");
   let originLocationCode = localStorage.getItem("originLocationCode");
 
+=======
+  getAccessToken()
+ getOriginLocationCode();
+ await getDestinationLocationCode();
+  let access_token = localStorage.getItem("Access_Token");
+  let originLocationCode = localStorage.getItem("originLocationCode");
+  // let destinationLocationCode = localStorage.getItem("destinationLocationCode");
+>>>>>>> bef83bd084a66e87f377f60a5c8899e9caac392f:assets/old/amadeusAPI.js
   fetch(
     `https://test.api.amadeus.com/v2/shopping/flight-offers?adults=1&currencyCode=USD&max=2&originLocationCode=` +
       originLocationCode +
@@ -51,12 +60,17 @@ function getOriginLocationCode() {
   let access_token = localStorage.getItem("Access_Token");
   let userLat = localStorage.getItem("userLat");
   let userLong = localStorage.getItem("userLong");
+<<<<<<< HEAD:assets/js/amadeusAPI.js
   return fetch(
     `https://test.api.amadeus.com/v1/reference-data/locations/airports?latitude=` +
       userLat +
       `&longitude=` +
       userLong +
       `&radius=500&page[limit]=1`,
+=======
+  fetch(
+    `https://test.api.amadeus.com/v1/reference-data/locations/airports?latitude=`+userLat+`&longitude=`+userLong+`&radius=500&page[limit]=1`,
+>>>>>>> bef83bd084a66e87f377f60a5c8899e9caac392f:assets/old/amadeusAPI.js
     {
       headers: {
         Authorization: "Bearer " + access_token,
@@ -65,6 +79,7 @@ function getOriginLocationCode() {
   )
     .then((response) => response.json())
     .then((data) => {
+<<<<<<< HEAD:assets/js/amadeusAPI.js
       localStorage.setItem("originLocationCode", data.data[0].iataCode);
     });
 }
@@ -79,15 +94,39 @@ function getDestinationLocationCode(token) {
       `&longitude=` +
       destLong +
       `&radius=500page[limit]=1`,
+=======
+      localStorage.setItem("originLocationCode",data.data[0].iataCode)
+    })
+};
+// we need value of search query to be past to getDestLongLat.... we need to store it's contents.....
+ function getDestinationLocationCode() {
+  getDestLongLat();
+  let destLat = localStorage.getItem("dest.lat");
+  let destLong = localStorage.getItem("dest.lon");
+  let access_token = localStorage.getItem("Access_Token");
+  return fetch(
+    `https://test.api.amadeus.com/v1/reference-data/locations/airports?latitude=` + destLat + `&longitude=` + destLong + `&radius=500page[limit]=1`,
+>>>>>>> bef83bd084a66e87f377f60a5c8899e9caac392f:assets/old/amadeusAPI.js
     {
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + access_token,
       },
     }
   )
     .then((response) => response.json())
+<<<<<<< HEAD:assets/js/amadeusAPI.js
     .then((data) => {
       destinationLocationCode = data.iataCode;
       return originLocationCode;
     });
 }
+=======
+    .then((data) => (
+      localStorage.setItem("destinationLocationCode",data.data[0].iataCode)
+    ))
+};
+
+p1SubBtn.addEventListener("click", getFlightOffers())
+
+
+>>>>>>> bef83bd084a66e87f377f60a5c8899e9caac392f:assets/old/amadeusAPI.js

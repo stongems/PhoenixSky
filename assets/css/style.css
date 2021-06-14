@@ -4,15 +4,16 @@
   --theme-yellow: #ffc700;
   --theme-blue: rgba(66, 133, 244, 0.9);
   --theme-trans-blue: rgba(66, 133, 244, 0.9);
+  --project-font-family: "Roboto", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  
   font-family: sans-serif;
-  background: url(../img/Phoenix\ SKy.jpg) no-repeat;
+  background: url(../img/PhoenixSKy.jfif) no-repeat;
   background-size: cover;
   background-color: black;
   color: var(--theme-light);
@@ -48,7 +49,7 @@ li a:active {
   height: 10em;
   margin: 0;
   padding: 0;
-  background: rgba(66, 133, 244, 0.5);
+  background-color: rgba(66, 133, 244, 0.5);
 }
 
 .flexbox-container {
@@ -58,63 +59,28 @@ li a:active {
   justify-content: center;
   align-items: center;
 }
-/* .flexbox-item {
-  width: 200px;
-  margin: 10px;
-  border: 3px solid #333;
-  background: rgba(66, 133, 244, 0.5);
-} */
 
-
-.search-container {
+/* .search-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 30rem;
   width: 20rem;
-  padding: auto;
   margin: auto;
-
-}
-
-.flexbox-item-3 {
-  min-height: 300px;
-}
-
-.homepage {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: auto;
-  padding: 3rem;
-  width: 15rem;
-  border-radius: 5%;
-  background: var(--theme-trans-blue);
-  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(94, 110, 201),
-    0rem 0rem 300rem rgb(0, 0, 0);
-}
-
-.homepage a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  padding-bottom: 3rem;
-  padding-top: 0;
-  margin: 0;
-}
+  border: solid coral;
+} */
 
 .search-bar {
   border: solid rgb(255, 255, 255);
   text-align: left;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--project-font-family);
   color: var(--theme-dark);
-  border-radius: 0.4rem;
-  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  font-size: 1.25rem;
   padding: 1.5%;
   margin: 0.5rem;
+  border: cornflowerblue;
 }
 
 .btn {
@@ -126,7 +92,8 @@ li a:active {
   background-color: var(--theme-yellow);
   border-radius: 10px;
   color: var(--theme-light);
-  font-size: 22px;
+  font-family: var(--project-font-family);
+  font-size: 1.25rem;
   font-weight: bold;
   line-height: 22px;
   margin: 16px 16px 16px 20px;
@@ -184,7 +151,7 @@ li a:active {
   width: 20%;
   font-size: 1.25rem;
   font-weight: bold;
-  font-family:'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(94, 110, 201),
     0rem 0rem 0.6rem rgb(94, 110, 201);
 }
@@ -216,7 +183,73 @@ li a:active {
   opacity: 50%;
 }
 
-#clearHome:hover {
-  background-color: #ff4500;
+.weather-card {
   color: var(--theme-dark);
+  background: var(--theme-trans-blue);
+  border: solid #ffffff;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+#flightSection {
+  color: var(--theme-dark);
+  background: var(--theme-trans-blue);
+  font-family: var(--project-font-family);
+  border: solid #ffffff;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+#flightCardInfo {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background: var(--theme-blue);
+  border-radius: 1rem;
+  padding: 14px 34px;
+  margin-top: 2%;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+    0rem 0rem 0.6rem rgb(94, 110, 201);
+}
+#flightCardInfo2 {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background: var(--theme-blue);
+  border-radius: 1rem;
+  padding: 14px 34px;
+  margin-top: 2%;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+    0rem 0rem 0.6rem rgb(94, 110, 201);
+}
+#destWeatherCardInfo {
+  display: flex;
+  justify-content: center;
+  border: none;
+  background: var(--theme-blue);
+  border-radius: 1rem;
+  padding: 14px 34px;
+  margin-top: 2%;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+    0rem 0rem 0.6rem rgb(94, 110, 201);
+}
+#userWeatherCardInfo {
+  display: flex;
+  justify-content: center;
+  border: none;
+  color: #ffc700;
+  background: var(--theme-blue);
+  border-radius: 1rem;
+  padding: 14px 34px;
+  margin-top: 2%;
+  cursor: pointer;
+  transition: ease-in-out 0.3s;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+    0rem 0rem 0.6rem rgb(94, 110, 201);
 }

@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>PhoenixSky</title>
   </head>
@@ -17,7 +18,7 @@
   
   
   <!-- ID used for script -->
-  <body class="flexbox-item-3"></div>
+   <body class="flexbox-item-3"></div>
     <!-----------------HEADER-------------------------->
     <main class="">
       <header class="Header-container">
@@ -33,66 +34,30 @@
           </ul>
         </div>
       </header>
-      
-        <div id ="buttons">
+      <div id ="buttons">
           <div  class="header-container hidden" id="navBar">
           </div>
-          
           </main>
-          </div>
-          
+        </div>
           <main>
             <div class="search-container">
               <!-- Moved out of new div with p2logo -->
-              <form class="search-bar">
-                <input id="destinationID" type="text" placeholder="Enter Home Destination">
+              <form>
+                <input class="search-bar" id="destinationID" type="text" placeholder="Destination City">
                 </form>
                 <div>
                 <button class="btn" id="p1SubBtn">Submit</button>
-                <button class="btn" id="button1">Flights</button>
-              <button class="btn" id="button2">Images</button>
+                
             </div>
             <!-------------- CONTAINER #3 ------------------->
       <!-- refresh and resubmit information in local storage to API -->
-      <section class="hidden" id="weatherSection">
+      <section class="hidden weather-card" id="weatherSection">
       </section>
       <!-- for flight data output -->
       <section class="hidden" id="flightSection">
       </section>
-      <!-- for images -->
-      <section class="hidden" id="imageSection">
-      </section>
-    </main>
-
-
-    <main class="hidden" id="aboutPage">
-      <!-- About us Page-->
-    </main>
-
-<main class="hidden" id="resourcesPage">
-      <!-- Resources Page-->
-    </main>
-
-<main class="hidden" id="contactPage">
-      <!-- Contact us Page -->
-    </main>
-
-  
-    
-    <div class="flexbox-item-4"></div>
-    
-    
-    
-    
-    <footer>
-    <div class="flexbox-item-5"></div>
-    
-</footer>
-
-    <script type="text/javascript" src="./assets/js/unsplashAPI.js"></script>
-    <script type="text/javascript" src="./assets/js/openWeatherAPI.js"></script>
-    <script type="text/javascript" src="./assets/js/abstractAPI.js"></script>
-    <script type="text/javascript" src="./assets/js/amadeusAPI.js"></script>
-    <script type="text/javascript" src="./assets/js/script.js"></script>
+    </main>    
   </body>
+  <script type="text/javascript" src="./assets/js/form.js"></script>
+  <script type="text/javascript" src="./assets/js/function.js"></script>
 </html>
