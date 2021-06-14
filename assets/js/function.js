@@ -20,7 +20,7 @@ p1SubBtn.addEventListener("click", function (e)
     localStorage.setItem("USERinput", JSON.stringify(destinationID.value));
     runAbstractAPI();
     runUnsplashAPI();
-    removeWeatherCards()
+    removeWeatherCards();
     removeFlightInfo();       
   };
 }
@@ -97,11 +97,8 @@ function runDestination(){
         localStorage.setItem("destinationCITY", data.name)    
         localStorage.setItem("destinationLATITUDE", data.coord.lat)
         localStorage.setItem("destinationLONGITUDE", data.coord.lon)
-        runAmadeusAPI();
-          // localStorage.setItem("destinationSTATE", data.x)
-          // localStorage.setItem("destinationSC", data.x)
-          // localStorage.setItem("destinationTIMEZONE", data.x)        
-        createWeatherCardDest();
+        runAmadeusAPI();       
+          createWeatherCardDest();
     }); 
   };
 
@@ -149,12 +146,12 @@ function getDestinationCode() {
     });
 };
 
-function getFlightOffers() {
+async function getFlightOffers() {
   let access_token = localStorage.getItem("Access_Token");
   let userLocationCODE = localStorage.getItem("userLocationCODE");
   let destinationCODE = localStorage.getItem("destinationCODE");
   let departureDate = localStorage.getItem("DATE");
-fetch(
+ fetch(
 `https://test.api.amadeus.com
 /v2/shopping/flight-offers
 ?adults=1&currencyCode=USD&max=2
@@ -165,7 +162,20 @@ fetch(
     .then((response) => response.json())
     .then(function (flightData) {
       console.log("FLIGHT INFO: ",flightData);
-
-      createUserFlight(flightData)
+      localStorage.setItem("flightPRICE", flightData.data[0].price.total)
+      localStorage.setItem("flightCARRIER", flightData.data[0].itineraries[0].segments[0].carrierCode)
+      localStorage.setItem("flightNUMBER", flightData.data[0].itineraries[0].segments[0].number)
+      localStorage.setItem("flightDEPARTTIME", flightData.data[0].itineraries[0].segments[0].departure.at)
+      localStorage.setItem("flightARRIVALTIME", flightData.data[0].itineraries[0].segments[0].arrival.at)
+      localStorage.setItem("flightUSERAITA", flightData.data[0].itineraries[0].segments[0].departure.iataCode)
+      localStorage.setItem("flightDESTAITA", flightData.data[0].itineraries[0].segments[0].arrival.iataCode)
+      localStorage.setItem("flightPRICE2", flightData.data[1].price.total)
+      localStorage.setItem("flightCARRIER2", flightData.data[1].itineraries[0].segments[0].carrierCode)
+      localStorage.setItem("flightNUMBER2", flightData.data[1].itineraries[0].segments[0].number)
+      localStorage.setItem("flightDEPARTTIME2", flightData.data[1].itineraries[0].segments[0].departure.at)
+      localStorage.setItem("flightARRIVALTIME2", flightData.data[1].itineraries[0].segments[0].arrival.at)
+      localStorage.setItem("flightUSERAITA2", flightData.data[1].itineraries[0].segments[0].departure.iataCode)
+      localStorage.setItem("flightDESTAITA2", flightData.data[1].itineraries[0].segments[0].arrival.iataCode)
+      createUserFlight()
     });
-}
+  }
