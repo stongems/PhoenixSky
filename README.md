@@ -1,8 +1,9 @@
 # PhoenixSky
-Flight and other information, Website. 
+A trip planning resource!
 
-## Proposal
-The website will take the input of the user and give them information about their desired destination, things such as flight information, images, and weather.
+
+## Overview
+PhoenixSy is made to give its users a starting point on their trip planning, letting them see detailed information about their destination with minimal input, only having to enter their desired destination and letting the site do everything else for them.
 
 
 ## Criteria
@@ -15,20 +16,33 @@ The website will take the input of the user and give them information about thei
 
 
 ## Design
+![image](./assets/img/done.png)
+Ui aesthetics and input simplified with integration of APIs. Users current location is captured from their IP Address and used as the origin location for flight and weather information. Background image changes to a random image associated with the user's input as flight information is searched for.
+
+
+## Concept
+Users will visit the site and be able to see flight information, the weather at their location and the background image of their destination.
+
+
 ![image](./assets/img/PhoenixSunFront.png)
 UI will be placed over a splash image. Navigation Bar is collapsable to free up window space for other functionality.
 ![image](./assets/img/PhoenixSunSmall.png)
 Site will be responsive and reorganize into a single column when window is at smallest setting.
 
+Ideas for future functionality
+* International travel options
+* Add Destination Event search
+* Multiple Image display
+
 
 
 ## Links
-[REPOSITORY](link.com)
+[REPOSITORY](https://github.com/stongems/PhoenixSky/tree/main)
 ```
-link.com
+https://github.com/stongems/PhoenixSky/tree/main
 ```
 
-[DEPLOYED](link.com)
+[DEPLOYED](https://stongems.github.io/PhoenixSky/)
 ```
-link.com
+https://stongems.github.io/PhoenixSky/
 ```
