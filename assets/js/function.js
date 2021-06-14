@@ -122,6 +122,7 @@ function runAmadeusAPI() {
   
 };
 
+
 function getUserLocationCode() {
   let access_token = localStorage.getItem("Access_Token");
   let userLat = localStorage.getItem("userLATITUDE");

@@ -42,9 +42,13 @@ fetch(phoenixSkyBG)
 function setBackground(data) {
     let bgImg = data.urls.full;
     console.log(bgImg);
-    
+    // BG style here, fade in and out around here.
     document.body.style.background = "url('"+bgImg+"')";
-    document.body.style.backgroundSize = "cover";       
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.objectFit = "scale-down";
+    document.body.style.objectFit = "contain";
+
 };
 }
 //create weather card
@@ -109,7 +113,7 @@ function removeFlightInfo(){
 function createUserFlight() {
     flightSection.classList.remove("hidden");
     flightCard.setAttribute("id","flightCardInfo");
-    price.textContent="$:"+localStorage.getItem("flightPRICE")
+    price.textContent="$ "+localStorage.getItem("flightPRICE")
     carrier.textContent=localStorage.getItem("flightCARRIER")
     flightNumber.textContent=localStorage.getItem("flightNUMBER")
     departTime.textContent="Departs: "+localStorage.getItem("flightDEPARTTIME")
@@ -130,7 +134,7 @@ function createUserFlight() {
 function createUserFlight2() {
     flightSection.classList.remove("hidden");
     flightCard2.setAttribute("id","flightCardInfo2");
-    price2.textContent="$:"+localStorage.getItem("flightPRICE2")
+    price2.textContent="$ "+localStorage.getItem("flightPRICE2")
     carrier2.textContent=localStorage.getItem("flightCARRIER2")
     flightNumber2.textContent=localStorage.getItem("flightNUMBER2")
     departTime2.textContent="Departs: "+localStorage.getItem("flightDEPARTTIME2")
