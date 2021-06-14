@@ -23,9 +23,6 @@ body {
   color: var(--theme-light);
 }
 
-/* nav ul li {
-  padding: 15%;
-} */
 li a {
   text-decoration: none;
   color: var(--theme-light);
@@ -39,7 +36,6 @@ li a:active {
   color: var(--theme-yellow);
 }
 
-/* GP classes */
 .hidden {
   display: none;
 }
@@ -105,14 +101,12 @@ li a:active {
   font-size: 150%;
   margin: 2rem;
   font-family: var(--project-font-family);
-
 }
 
 #phx {
   color: var(--theme-yellow);
 }
 
-/* Nav Bar */
 .navMenu {
   position: relative;
   bottom: 2.5rem;
@@ -123,6 +117,7 @@ li a:active {
 .navBtn:active {
   opacity: 50%;
 }
+
 .navBarMenu {
   position: absolute;
   right: 0%;
@@ -157,9 +152,11 @@ li a:active {
   border: none;
   padding: 5%;
 }
+
 #openNavBarBtn:hover {
   opacity: 50%;
 }
+
 #closeNavBarBtn:hover {
   opacity: 50%;
 }
@@ -171,6 +168,7 @@ li a:active {
   border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;
+  width: 550px;
 }
 #flightSection {
   color: var(--theme-dark);
@@ -180,6 +178,7 @@ li a:active {
   border-radius: 1rem;
   margin: 1rem;
   padding: 1rem;
+  width: 550px;
 }
 #flightCardInfo {
   display: flex;
@@ -246,24 +245,24 @@ li a:active {
 p {
   padding-left: 1rem;
 }
-@media (max-width: 600px) { 
+@media (max-width: 600px) {
   .navOption {
     font-size: 10px;
   }
-#userWeatherCardInfo {
-  flex-direction: column;
-  justify-content: center;
-  border: none;
-  color: var(--theme-light);
-  font-family: var(--project-font-family);
-  background: var(--theme-blue);
-  text-align: center;
-  margin: 0;
-  font-size: 2rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
-    0rem 0rem 0.6rem rgb(94, 110, 201);
+  #userWeatherCardInfo {
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    color: var(--theme-light);
+    font-family: var(--project-font-family);
+    background: var(--theme-blue);
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+      0rem 0rem 0.6rem rgb(94, 110, 201);
   }
   #userWeatherCardInfo img {
     width: 19%;
@@ -272,32 +271,37 @@ p {
     left: 4px;
   }
   #destWeatherCardInfo {
-  flex-direction: column;
-  justify-content: center;
-  border: none;
-  color: var(--theme-yellow);
-  font-family: var(--project-font-family);
-  background: var(--theme-blue);
-  text-align: center;
-  font-size: 2rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
-    0rem 0rem 0.6rem rgb(94, 110, 201);
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    color: var(--theme-yellow);
+    font-family: var(--project-font-family);
+    background: var(--theme-blue);
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+      0rem 0rem 0.6rem rgb(94, 110, 201);
   }
   #destWeatherCardInfo img {
     width: 19%;
     position: relative;
     bottom: 503px;
-    left: 4px; 
-}
-#flightCardInfo {
-
-  flex-direction: column;
-  justify-content: center;
-}
-#flightCardInfo2 {
-
-  flex-direction: column;
-  justify-content: center;
+    left: 4px;
+  }
+  #flightCardInfo {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #flightCardInfo2 {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #flightSection {
+    width: 300px;
+  }
+  .weather-card {
+    width: 300px;
+  }
 }
