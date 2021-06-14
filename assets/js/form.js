@@ -25,10 +25,7 @@ const unsplashKey = "0tNQnwiqu7-f6GxEQvW8DBp3RdMXqYHvbZrHcI8VhRs";
 let queryPart1 = localStorage.getItem("destinationCITY") || "arizona";
 let queryPart2 = "cityscape";
 
-let phoenixSkyBG = 
-`https://api.unsplash.com/photos/random?client_id=
-${unsplashKey}
-&query=${queryPart1}+${queryPart2}`;
+let phoenixSkyBG=`https://api.unsplash.com/photos/random?client_id=${unsplashKey}&query=${queryPart1}+${queryPart2}`;
 
 // UNSPLASH API
 function runUnsplashAPI() {    
