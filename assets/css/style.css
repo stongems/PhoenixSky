@@ -9,6 +9,8 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -16,12 +18,14 @@ body {
   background: url(../img/PhoenixSKy.jfif) no-repeat;
   background-size: cover;
   background-color: black;
+  width: 100%;
+  height: 100vh;
   color: var(--theme-light);
 }
 
-nav ul li {
+/* nav ul li {
   padding: 15%;
-}
+} */
 li a {
   text-decoration: none;
   color: var(--theme-light);
@@ -45,9 +49,9 @@ li a:active {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 100vw;
+  width: 100%;
   height: 10em;
-  margin: 0;
+  margin: -8px;
   padding: 0;
   background-color: rgba(66, 133, 244, 0.5);
 }
@@ -59,17 +63,6 @@ li a:active {
   justify-content: center;
   align-items: center;
 }
-
-/* .search-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 30rem;
-  width: 20rem;
-  margin: auto;
-  border: solid coral;
-} */
 
 .search-bar {
   border: solid rgb(255, 255, 255);
@@ -110,6 +103,8 @@ li a:active {
   text-decoration: none;
   color: var(--theme-light);
   font-size: 150%;
+  margin: 2rem;
+
 }
 
 #phx {
@@ -118,26 +113,11 @@ li a:active {
 
 /* Nav Bar */
 .navMenu {
+  position: relative;
+  bottom: 2.5rem;
   list-style-type: none;
   text-align: center;
 }
-
-/* .airPlaneBtn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: none;
-  background-color: var(--theme-blue);
-  border-radius: 10px;
-  color: black;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  cursor: pointer;
-  transition: ease-in-out 0.3s;
-} */
 
 .navBtn:active {
   opacity: 50%;
@@ -168,7 +148,7 @@ li a:active {
   cursor: pointer;
   transition: ease-in-out 0.3s;
   box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(94, 110, 201),
-    0rem 0rem 0.6rem rgb(94, 110, 201);
+    0rem 0rem 0.6rem rgb(58, 65, 104);
 }
 
 #closeNavBarBtn {
@@ -210,7 +190,7 @@ li a:active {
   margin-top: 2%;
   cursor: pointer;
   transition: ease-in-out 0.3s;
-  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(51, 69, 160),
     0rem 0rem 0.6rem rgb(94, 110, 201);
 }
 #flightCardInfo2 {
@@ -218,6 +198,7 @@ li a:active {
   justify-content: center;
   border: none;
   background: var(--theme-blue);
+  font-family: var(--project-font-family);
   border-radius: 1rem;
   padding: 14px 34px;
   margin-top: 2%;
@@ -230,6 +211,7 @@ li a:active {
   display: flex;
   justify-content: center;
   border: none;
+  font-family: var(--project-font-family);
   background: var(--theme-blue);
   border-radius: 1rem;
   padding: 14px 34px;
@@ -252,4 +234,34 @@ li a:active {
   transition: ease-in-out 0.3s;
   box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
     0rem 0rem 0.6rem rgb(94, 110, 201);
+}
+.navOption {
+  font-size: 1.2rem;
+  font-family: var(--project-font-family);
+}
+
+@media (max-width: 600px) { 
+  .navOption {
+    font-size: 10px;
+  }
+#userWeatherCardInfo {
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  color: #ffc700;
+  font-family: var(--project-font-family);
+  background: var(--theme-blue);
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+    0rem 0rem 0.6rem rgb(94, 110, 201);
+  }
+  #userWeatherCardInfo img {
+    width: 19%;
+    position: relative;
+    bottom: 503px;
+    left: 4px;
+  }
 }

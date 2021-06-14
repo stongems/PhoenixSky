@@ -113,7 +113,7 @@ function removeFlightInfo(){
 function createUserFlight() {
     flightSection.classList.remove("hidden");
     flightCard.setAttribute("id","flightCardInfo");
-    price.textContent="$ "+localStorage.getItem("flightPRICE")
+    price.textContent="$"+localStorage.getItem("flightPRICE")
     carrier.textContent=localStorage.getItem("flightCARRIER")
     flightNumber.textContent=localStorage.getItem("flightNUMBER")
     departTime.textContent="Departs: "+localStorage.getItem("flightDEPARTTIME")
@@ -134,7 +134,7 @@ function createUserFlight() {
 function createUserFlight2() {
     flightSection.classList.remove("hidden");
     flightCard2.setAttribute("id","flightCardInfo2");
-    price2.textContent="$ "+localStorage.getItem("flightPRICE2")
+    price2.textContent="$"+localStorage.getItem("flightPRICE2")
     carrier2.textContent=localStorage.getItem("flightCARRIER2")
     flightNumber2.textContent=localStorage.getItem("flightNUMBER2")
     departTime2.textContent="Departs: "+localStorage.getItem("flightDEPARTTIME2")
@@ -159,32 +159,15 @@ dest.parentNode.removeChild(dest);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// NAV BAR BUTTON LISTENERS 
-// openNavBarBtn.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     openNavBarBtn.classList.add("hidden");
-//     navBarMenu.classList.remove("hidden");
-//   });
+// NAV BAR HERE
+openNavBarBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    openNavBarBtn.classList.add("hidden");
+    navBarMenu.classList.remove("hidden");
+  });
   
-//   closeNavBarBtn.addEventListener("click", function (e) {
-//     e.preventDefault();
-//     navBarMenu.classList.add("hidden");
-//     openNavBarBtn.classList.remove("hidden");
-//   
+  closeNavBarBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    navBarMenu.classList.add("hidden");
+    openNavBarBtn.classList.remove("hidden");
+  });
