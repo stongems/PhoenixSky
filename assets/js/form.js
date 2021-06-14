@@ -12,6 +12,8 @@ const carrier2 = document.createElement("p");
 const flightNumber2 = document.createElement("p");
 const departTime2 = document.createElement("p");
 const arrivalTime2 = document.createElement("p");
+const destination1 = document.createElement("p");
+const destination2 = document.createElement("p");
 const userAirportIATA2 = document.createElement("p");
 const destAirportIATA2 = document.createElement("p");
 const flightCard2 = document.createElement("div");
@@ -120,14 +122,15 @@ function createUserFlight() {
     arrivalTime.textContent="Arrives: "+localStorage.getItem("flightARRIVALTIME")
     userAirportIATA.textContent="Departs from: "+localStorage.getItem("flightUSERAITA")
     destAirportIATA.textContent="Arrives at: "+localStorage.getItem("flightDESTAITA")
+    destination1.textContent = localStorage.getItem("destinationCITY")
     flightSection.append(flightCard)
     flightCard.append(price)
-    flightCard.append(carrier)
-    flightCard.append(flightNumber)
+    flightCard.append(destination1)
     flightCard.append(departTime)
     flightCard.append(arrivalTime)
     flightCard.append(userAirportIATA)
     flightCard.append(destAirportIATA)
+
     createUserFlight2()
 }
 
@@ -141,14 +144,15 @@ function createUserFlight2() {
     arrivalTime2.textContent="Arrives: "+localStorage.getItem("flightARRIVALTIME2")
     userAirportIATA2.textContent="Departs from: "+localStorage.getItem("flightUSERAITA2")
     destAirportIATA2.textContent="Arrives at: "+localStorage.getItem("flightDESTAITA2")
+    destination2.textContent = localStorage.getItem("destinationCITY")
     flightSection.append(flightCard2)
     flightCard2.append(price2)
-    flightCard2.append(carrier2)
-    flightCard2.append(flightNumber2)
+    flightCard2.append(destination2)
     flightCard2.append(departTime2)
     flightCard2.append(arrivalTime2)
     flightCard2.append(userAirportIATA2)
     flightCard2.append(destAirportIATA2)
+
     
 }
 function removeWeatherCards(){

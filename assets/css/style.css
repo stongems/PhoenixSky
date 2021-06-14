@@ -104,6 +104,7 @@ li a:active {
   color: var(--theme-light);
   font-size: 150%;
   margin: 2rem;
+  font-family: var(--project-font-family);
 
 }
 
@@ -184,7 +185,8 @@ li a:active {
   display: flex;
   justify-content: center;
   border: none;
-  background: var(--theme-blue);
+  background: var(--theme-yellow);
+  color: var(--theme-dark);
   border-radius: 1rem;
   padding: 14px 34px;
   margin-top: 2%;
@@ -197,8 +199,9 @@ li a:active {
   display: flex;
   justify-content: center;
   border: none;
-  background: var(--theme-blue);
+  background: var(--theme-yellow);
   font-family: var(--project-font-family);
+  color: var(--theme-dark);
   border-radius: 1rem;
   padding: 14px 34px;
   margin-top: 2%;
@@ -213,6 +216,7 @@ li a:active {
   border: none;
   font-family: var(--project-font-family);
   background: var(--theme-blue);
+  color: var(--theme-yellow);
   border-radius: 1rem;
   padding: 14px 34px;
   margin-top: 2%;
@@ -225,7 +229,7 @@ li a:active {
   display: flex;
   justify-content: center;
   border: none;
-  color: #ffc700;
+  color: var(--theme-light);
   background: var(--theme-blue);
   border-radius: 1rem;
   padding: 14px 34px;
@@ -239,7 +243,9 @@ li a:active {
   font-size: 1.2rem;
   font-family: var(--project-font-family);
 }
-
+p {
+  padding-left: 1rem;
+}
 @media (max-width: 600px) { 
   .navOption {
     font-size: 10px;
@@ -248,10 +254,11 @@ li a:active {
   flex-direction: column;
   justify-content: center;
   border: none;
-  color: #ffc700;
+  color: var(--theme-light);
   font-family: var(--project-font-family);
   background: var(--theme-blue);
   text-align: center;
+  margin: 0;
   font-size: 2rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -264,4 +271,33 @@ li a:active {
     bottom: 503px;
     left: 4px;
   }
+  #destWeatherCardInfo {
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  color: var(--theme-yellow);
+  font-family: var(--project-font-family);
+  background: var(--theme-blue);
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  box-shadow: inset 0rem 0rem 0rem 0.06rem rgb(201, 204, 219),
+    0rem 0rem 0.6rem rgb(94, 110, 201);
+  }
+  #destWeatherCardInfo img {
+    width: 19%;
+    position: relative;
+    bottom: 503px;
+    left: 4px; 
+}
+#flightCardInfo {
+
+  flex-direction: column;
+  justify-content: center;
+}
+#flightCardInfo2 {
+
+  flex-direction: column;
+  justify-content: center;
 }
