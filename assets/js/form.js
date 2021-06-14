@@ -77,7 +77,7 @@ temp.textContent = localStorage.getItem("userTEMPERATURE")
 weather.textContent = localStorage.getItem("userWEATHER")
 feels.textContent = localStorage.getItem("userFEELSLIKE")
 humid.textContent = localStorage.getItem("userHUMIDITY")
-let weatherIcon = `http://openweathermap.org/img/w/${localStorage.getItem("userICON")}.png`;
+let weatherIcon = `https://openweathermap.org/img/w/${localStorage.getItem("userICON")}.png`;
 icon.src = weatherIcon
 }
 
@@ -104,7 +104,7 @@ function createWeatherCardDest(){
     weather.textContent = localStorage.getItem("destinationWEATHER");
     feels.textContent = localStorage.getItem("destinationFEELSLIKE");
     humid.textContent = localStorage.getItem("destinationHUMIDITY");
-    let weatherIcon = `http://openweathermap.org/img/w/${localStorage.getItem("userICON")}.png`;
+    let weatherIcon = `https://openweathermap.org/img/w/${localStorage.getItem("userICON")}.png`;
     icon.src = weatherIcon
 }
 
