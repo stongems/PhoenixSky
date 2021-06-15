@@ -162,6 +162,7 @@ li a:active {
 }
 
 .weather-card {
+  justify-content: center;
   color: var(--theme-dark);
   background: var(--theme-trans-blue);
   border: solid #ffffff;
@@ -171,6 +172,7 @@ li a:active {
   width: 550px;
 }
 #flightSection {
+  justify-content: center;
   color: var(--theme-dark);
   background: var(--theme-trans-blue);
   font-family: var(--project-font-family);
@@ -303,5 +305,11 @@ p {
   }
   .weather-card {
     width: 300px;
+  }
+  h3{
+    margin: 0;
+  }
+  p {
+    margin:0;
   }
 }
